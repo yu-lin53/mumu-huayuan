@@ -145,6 +145,9 @@ footer .f-copy{font-size:11px;color:rgba(245,240,232,.3);letter-spacing:.04em;wi
 .toast{position:fixed;bottom:24px;left:50%;transform:translateX(-50%) translateY(20px);background:var(--text);color:#fff;padding:10px 20px;font-size:12px;letter-spacing:.08em;opacity:0;transition:all .3s;pointer-events:none;z-index:999;white-space:nowrap}
 .toast.show{opacity:1;transform:translateX(-50%) translateY(0)}
 
+.scroll-top{position:fixed;bottom:24px;right:24px;width:44px;height:44px;border-radius:50%;background:var(--moss);color:#fff;border:none;font-size:20px;display:flex;align-items:center;justify-content:center;cursor:pointer;opacity:0;pointer-events:none;transition:all .3s;z-index:998}
+.scroll-top.show{opacity:1;pointer-events:auto}
+.scroll-top:hover{background:#5a6e4e}
 @media(max-width:600px){
   .about-hero{grid-template-columns:1fr}
   .contact-channels{grid-template-columns:1fr}
@@ -334,6 +337,7 @@ footer .f-copy{font-size:11px;color:rgba(245,240,232,.3);letter-spacing:.04em;wi
 </footer>
 
 <div class="toast" id="toast"></div>
+<button class="scroll-top" id="scrollTop" onclick="window.scrollTo({top:0,behavior:'smooth'});" aria-label="回到頂部"><i class="ti ti-arrow-up"></i></button>
 
 <script>
 const products = [
@@ -482,6 +486,7 @@ function submitForm() {
 }
 
 renderPreview();
+window.addEventListener("scroll",function(){var b=document.getElementById("scrollTop");if(b){if(window.scrollY>200){b.classList.add("show");}else{b.classList.remove("show");}}});
 </script>
 </body>
 </html>
