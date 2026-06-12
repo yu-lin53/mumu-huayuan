@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>木木花願 — 手作敬獻紙藝</title>
+<meta name="description" content="台中手作敬獻紙藝，以雙手折疊紙藝，將最真誠的情感化為可以獻上的形狀。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@300;400&family=Noto+Sans+TC:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@3.19.0/dist/tabler-icons.min.css">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --moss:#6B7F5E;--sage:#9AAE8A;--cream:#F5F0E8;--brown:#8C6D52;--rose:#C4968A;
+  --bg:#F5F0E8;--surface:#fff;--border:rgba(140,109,82,0.15);
+  --text:#2e2620;--muted:#7a6658;--hint:#b09a8c;
+}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--text);font-family:'Noto Sans TC',sans-serif;font-weight:300;font-size:14px;line-height:1.8}
+a{text-decoration:none;color:inherit}
+button{cursor:pointer;font-family:'Noto Sans TC',sans-serif}
+
+/* NAV */
+.site-nav{background:var(--surface);border-bottom:1px solid var(--border);display:flex;align-items:center;justify-content:space-between;padding:0 28px;height:68px;position:sticky;top:0;z-index:200}
+.nav-brand{font-family:'Noto Serif TC',serif;font-size:16px;font-weight:400;color:var(--moss);letter-spacing:.12em;cursor:pointer}
+.nav-links{display:flex;gap:0;list-style:none}
+.nav-links li a{display:block;padding:0 14px;font-size:12px;letter-spacing:.08em;color:var(--muted);cursor:pointer;transition:color .2s;line-height:68px}
+.nav-links li a:hover,.nav-links li a.active{color:var(--moss)}
+.nav-cart{position:relative;cursor:pointer;padding:8px;color:var(--muted);transition:color .2s;background:none;border:none;font-size:20px}
+.nav-cart:hover{color:var(--moss)}
+.cart-badge{position:absolute;top:2px;right:2px;width:16px;height:16px;border-radius:50%;background:var(--rose);color:#fff;font-size:10px;display:none;align-items:center;justify-content:center;font-weight:500}
+
+/* PAGES */
+.page{display:none}
+.page.active{display:block}
+
+/* HOME */
+.hero{padding:80px 28px 72px;text-align:center;border-bottom:1px solid var(--border)}
+.hero-label{font-size:11px;letter-spacing:.3em;color:var(--rose);margin-bottom:20px}
+.hero-title{font-family:'Noto Serif TC',serif;font-size:clamp(26px,5vw,44px);font-weight:300;color:var(--text);line-height:1.6;margin-bottom:16px}
+.hero-title span{color:var(--moss)}
+.hero-sub{font-size:13px;color:var(--muted);max-width:320px;margin:0 auto 32px;line-height:2}
+.btn-primary{display:inline-block;padding:10px 28px;background:var(--moss);color:#fff;font-size:12px;letter-spacing:.15em;border:none;transition:background .25s}
+.btn-primary:hover{background:#5a6e4e}
+.btn-outline{display:inline-block;padding:9px 24px;border:1px solid var(--moss);color:var(--moss);font-size:12px;letter-spacing:.15em;background:transparent;transition:all .25s}
+.btn-outline:hover{background:var(--moss);color:#fff}
+.home-features{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:1px;background:var(--border);border-top:1px solid var(--border);border-bottom:1px solid var(--border)}
+.feature-item{background:var(--surface);padding:32px 20px;text-align:center}
+.feature-icon{font-size:22px;color:var(--sage);margin-bottom:12px}
+.feature-item h3{font-family:'Noto Serif TC',serif;font-size:14px;font-weight:400;color:var(--text);margin-bottom:6px}
+.feature-item p{font-size:12px;color:var(--muted);line-height:1.8}
+.home-preview{padding:60px 28px;text-align:center}
+.section-label{font-size:11px;letter-spacing:.28em;color:var(--rose);margin-bottom:8px}
+.section-title{font-family:'Noto Serif TC',serif;font-size:20px;font-weight:300;color:var(--text);margin-bottom:32px}
+.preview-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:12px;max-width:680px;margin:0 auto 28px}
+.preview-card{background:var(--surface);border:1px solid var(--border);padding:20px 16px;text-align:center;cursor:pointer;transition:border-color .2s}
+.preview-card:hover{border-color:var(--sage)}
+.preview-card .p-icon{width:52px;height:52px;margin:0 auto 12px}
+.preview-card h4{font-size:13px;font-weight:500;color:var(--text);margin-bottom:4px}
+.preview-card .price{font-size:12px;color:var(--rose)}
+
+/* ABOUT */
+.about-hero{padding:60px 28px;border-bottom:1px solid var(--border);display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center;max-width:680px;margin:0 auto}
+.about-text .section-label{margin-bottom:12px}
+.about-text h2{font-family:'Noto Serif TC',serif;font-size:22px;font-weight:300;line-height:1.7;margin-bottom:16px}
+.about-text p{font-size:13px;color:var(--muted);line-height:2.1;margin-bottom:12px}
+.quote-block{background:var(--surface);border-left:2px solid var(--sage);padding:20px 20px 20px 24px}
+.quote-block p{font-family:'Noto Serif TC',serif;font-size:13px;color:var(--text);line-height:2.1}
+.quote-block .q-author{margin-top:12px;font-size:11px;letter-spacing:.15em;color:var(--hint)}
+.about-values{padding:48px 28px;display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:1px;background:var(--border);border-top:1px solid var(--border);border-bottom:1px solid var(--border)}
+.val-item{background:var(--surface);padding:28px 20px}
+.val-item .vi-label{font-size:10px;letter-spacing:.25em;color:var(--rose);margin-bottom:8px}
+.val-item h3{font-family:'Noto Serif TC',serif;font-size:15px;font-weight:300;color:var(--text);margin-bottom:8px}
+.val-item p{font-size:12px;color:var(--muted);line-height:1.9}
+
+/* SHOP */
+.shop-header{padding:40px 28px 28px;border-bottom:1px solid var(--border);display:flex;align-items:baseline;justify-content:space-between;flex-wrap:wrap;gap:12px}
+.shop-header h2{font-family:'Noto Serif TC',serif;font-size:20px;font-weight:300}
+.filter-row{display:flex;gap:8px;flex-wrap:wrap}
+.filter-btn{padding:5px 14px;font-size:11px;letter-spacing:.1em;border:1px solid var(--border);background:transparent;color:var(--muted);transition:all .2s}
+.filter-btn.active,.filter-btn:hover{border-color:var(--moss);color:var(--moss);background:rgba(107,127,94,.06)}
+.product-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(180px,1fr));gap:1px;background:var(--border);border-bottom:1px solid var(--border)}
+.prod-card{background:var(--surface);transition:background .2s}
+.prod-card:hover{background:#faf7f2}
+.prod-img{height:140px;display:flex;align-items:center;justify-content:center;border-bottom:1px solid var(--border);color:var(--sage)}
+.prod-body{padding:14px 16px}
+.prod-tag{font-size:10px;letter-spacing:.2em;color:var(--rose);margin-bottom:4px}
+.prod-name{font-size:13px;font-weight:500;color:var(--text);margin-bottom:4px}
+.prod-desc{font-size:11px;color:var(--muted);line-height:1.8;margin-bottom:10px}
+.prod-footer{display:flex;align-items:center;justify-content:space-between}
+.prod-price{font-size:14px;font-weight:500;color:var(--brown)}
+.add-btn{width:28px;height:28px;border:1px solid var(--moss);background:transparent;color:var(--moss);font-size:16px;display:flex;align-items:center;justify-content:center;transition:all .2s}
+.add-btn:hover{background:var(--moss);color:#fff}
+
+/* CART */
+.cart-wrap{max-width:560px;margin:0 auto;padding:40px 28px}
+.cart-wrap h2{font-family:'Noto Serif TC',serif;font-size:20px;font-weight:300;margin-bottom:28px;padding-bottom:16px;border-bottom:1px solid var(--border)}
+.empty-cart{text-align:center;padding:60px 0;color:var(--hint)}
+.empty-cart i{font-size:40px;margin-bottom:16px;display:block}
+.empty-cart p{font-size:13px}
+.cart-item{display:flex;align-items:center;gap:16px;padding:16px 0;border-bottom:1px solid var(--border)}
+.ci-icon{width:44px;height:44px;background:var(--surface);border:1px solid var(--border);display:flex;align-items:center;justify-content:center;flex-shrink:0;color:var(--sage);font-size:20px}
+.ci-info{flex:1}
+.ci-name{font-size:13px;font-weight:500;color:var(--text)}
+.ci-tag{font-size:11px;color:var(--rose);margin-top:2px}
+.ci-controls{display:flex;align-items:center;gap:8px}
+.qty-btn{width:24px;height:24px;border:1px solid var(--border);background:transparent;font-size:14px;display:flex;align-items:center;justify-content:center;color:var(--muted);transition:all .2s}
+.qty-btn:hover{border-color:var(--moss);color:var(--moss)}
+.qty-num{font-size:13px;font-weight:500;min-width:20px;text-align:center}
+.ci-price{font-size:13px;font-weight:500;color:var(--brown);min-width:60px;text-align:right}
+.ci-del{background:none;border:none;color:var(--hint);font-size:16px;padding:4px;transition:color .2s}
+.ci-del:hover{color:#c0392b}
+.cart-summary{margin-top:24px;padding:20px;background:var(--surface);border:1px solid var(--border)}
+.summary-row{display:flex;justify-content:space-between;font-size:13px;margin-bottom:8px;color:var(--muted)}
+.summary-total{display:flex;justify-content:space-between;font-size:16px;font-weight:500;color:var(--text);padding-top:12px;margin-top:12px;border-top:1px solid var(--border)}
+.cart-cta{margin-top:16px;width:100%;padding:12px;background:var(--moss);color:#fff;border:none;font-size:13px;letter-spacing:.15em;transition:background .25s}
+.cart-cta:hover{background:#5a6e4e}
+
+/* CONTACT */
+.contact-wrap{max-width:560px;margin:0 auto;padding:48px 28px}
+.contact-wrap h2{font-family:'Noto Serif TC',serif;font-size:20px;font-weight:300;margin-bottom:8px}
+.contact-wrap .sub{font-size:13px;color:var(--muted);margin-bottom:36px;line-height:2}
+.contact-channels{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:36px}
+.channel-card{background:var(--surface);border:1px solid var(--border);padding:20px 16px;text-align:center}
+.channel-card i{font-size:22px;color:var(--sage);margin-bottom:8px;display:block}
+.channel-card h4{font-size:13px;font-weight:500;color:var(--text);margin-bottom:4px}
+.channel-card p{font-size:11px;color:var(--muted);line-height:1.8}
+.channel-card a{font-size:11px;color:var(--moss)}
+.form-section h3{font-family:'Noto Serif TC',serif;font-size:16px;font-weight:300;margin-bottom:20px;color:var(--text)}
+.form-row{margin-bottom:16px}
+.form-row label{display:block;font-size:11px;letter-spacing:.1em;color:var(--muted);margin-bottom:6px}
+.form-row input,.form-row textarea,.form-row select{width:100%;padding:10px 12px;border:1px solid var(--border);background:var(--surface);font-size:13px;font-family:'Noto Sans TC',sans-serif;color:var(--text);outline:none;transition:border-color .2s;-webkit-appearance:none;appearance:none}
+.form-row input:focus,.form-row textarea:focus,.form-row select:focus{border-color:var(--sage)}
+.form-row textarea{height:100px;resize:vertical}
+.form-submit{width:100%;padding:11px;background:var(--moss);color:#fff;border:none;font-size:12px;letter-spacing:.2em;margin-top:4px;transition:background .25s}
+.form-submit:hover{background:#5a6e4e}
+.form-success{display:none;text-align:center;padding:24px;background:rgba(154,174,138,.1);border:1px solid var(--sage);font-size:13px;color:var(--moss);margin-top:16px}
+
+/* FOOTER */
+footer{background:#2d2620;padding:28px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px;margin-top:0}
+footer .f-brand{font-family:'Noto Serif TC',serif;font-size:14px;color:rgba(245,240,232,.6);letter-spacing:.1em}
+footer .f-copy{font-size:11px;color:rgba(245,240,232,.3);letter-spacing:.04em;width:100%}
+
+/* TOAST */
+.toast{position:fixed;bottom:24px;left:50%;transform:translateX(-50%) translateY(20px);background:var(--text);color:#fff;padding:10px 20px;font-size:12px;letter-spacing:.08em;opacity:0;transition:all .3s;pointer-events:none;z-index:999;white-space:nowrap}
+.toast.show{opacity:1;transform:translateX(-50%) translateY(0)}
+
+.scroll-top{position:fixed;bottom:24px;right:24px;width:44px;height:44px;border-radius:50%;background:var(--moss);color:#fff;border:none;font-size:20px;display:flex;align-items:center;justify-content:center;cursor:pointer;opacity:0;pointer-events:none;transition:all .3s;z-index:998}
+.scroll-top.show{opacity:1;pointer-events:auto}
+.scroll-top:hover{background:#5a6e4e}
+@media(max-width:600px){
+  .about-hero{grid-template-columns:1fr}
+  .contact-channels{grid-template-columns:1fr}
+  .nav-links{display:none}
+  .shop-header{flex-direction:column;gap:16px}
+}
+</style>
+</head>
+<body>
+
+<nav class="site-nav">
+  <img src="images/logo.png-removebg-preview.png" alt="木木花願" onclick="goPage('home')" style="height:230px;cursor:pointer;display:block;object-fit:contain;">
+  <ul class="nav-links">
+    <li><a onclick="goPage('home')" data-page="home">首頁</a></li>
+    <li><a onclick="goPage('about')" data-page="about">品牌介紹</a></li>
+    <li><a onclick="goPage('shop')" data-page="shop">商品展示</a></li>
+    <li><a onclick="goPage('contact')" data-page="contact">聯絡方式</a></li>
+  </ul>
+  <button class="nav-cart" onclick="goPage('cart')" aria-label="購物車">
+    <i class="ti ti-shopping-bag"></i>
+    <span class="cart-badge" id="cartBadge">0</span>
+  </button>
+</nav>
+
+<!-- HOME -->
+<div class="page active" id="page-home">
+  <div class="hero">
+    <p class="hero-label">木木花願 · 敬獻紙藝</p>
+    <h1 class="hero-title">用花傳遞心願<br>讓每一份<span>思念與祈願</span>都被看見</h1>
+    <p class="hero-sub">以雙手折疊紙藝，將最真誠的情感化為可以獻上的形狀</p>
+    <button class="btn-primary" onclick="goPage('shop')">探索作品</button>
+  </div>
+  <div class="home-features">
+    <div class="feature-item">
+      <div class="feature-icon"><i class="ti ti-hand-stop" aria-hidden="true"></i></div>
+      <h3>全手工製作</h3>
+      <p>每一朵花都是親手折疊，不依賴模板</p>
+    </div>
+    <div class="feature-item">
+      <div class="feature-icon"><i class="ti ti-heart" aria-hidden="true"></i></div>
+      <h3>客製化服務</h3>
+      <p>依照場合與心意調整款式與組合</p>
+    </div>
+    <div class="feature-item">
+      <div class="feature-icon"><i class="ti ti-leaf" aria-hidden="true"></i></div>
+      <h3>敬獻文化傳承</h3>
+      <p>結合傳統敬獻禮俗，賦予現代美感</p>
+    </div>
+    <div class="feature-item">
+      <div class="feature-icon"><i class="ti ti-package" aria-hidden="true"></i></div>
+      <h3>精心包裝寄送</h3>
+      <p>台中可自取，全台宅配安全到府</p>
+    </div>
+  </div>
+  <div class="home-preview">
+    <p class="section-label">精選作品</p>
+    <h2 class="section-title">每一款都是手工折疊，獨一無二</h2>
+    <div class="preview-grid" id="previewGrid"></div>
+    <button class="btn-outline" onclick="goPage('shop')">查看所有商品</button>
+  </div>
+</div>
+
+<!-- ABOUT -->
+<div class="page" id="page-about">
+  <div class="about-hero">
+    <div class="about-text">
+      <p class="section-label">關於木木花願</p>
+      <h2>每一朵紙花<br>都有它要去的地方</h2>
+      <p>木木花願由手作師薏仁創立於台中，專注於手工敬獻紙藝。「木木」兩字來自姓氏「林」——兩棵木，是根，也是初心。</p>
+      <p>我相信，獻花不只是儀式，是一種對話——和逝去的人、和心中的神明、和那些還沒說出口的話。</p>
+    </div>
+    <div class="quote-block">
+      <p>「 用花傳遞心願，讓每一份思念與祈願都被看見。」</p>
+      <p class="q-author">— 薏仁 · 木木花願創辦人</p>
+    </div>
+  </div>
+  <div class="about-values">
+    <div class="val-item">
+      <p class="vi-label">材料</p>
+      <h3>經文紙與美術紙</h3>
+      <p>選用適合敬獻場合的紙材，同時兼顧質感與文化意涵</p>
+    </div>
+    <div class="val-item">
+      <p class="vi-label">工序</p>
+      <h3>全程手工製作</h3>
+      <p>從裁紙到成形，每個步驟都親手完成，不走捷徑</p>
+    </div>
+    <div class="val-item">
+      <p class="vi-label">場合</p>
+      <h3>祭祀・節日・感謝</h3>
+      <p>清明、中元、生日、婚慶、神明誕辰——有心意的場合都適合</p>
+    </div>
+    <div class="val-item">
+      <p class="vi-label">品牌</p>
+      <h3>木木創藝手作</h3>
+      <p>同品牌旗下也提供手作課程，歡迎來學習紙藝的溫柔</p>
+    </div>
+  </div>
+</div>
+
+<!-- SHOP -->
+<div class="page" id="page-shop">
+  <div class="shop-header">
+    <div>
+      <p class="section-label" style="margin-bottom:4px">商品展示</p>
+      <h2>所有作品</h2>
+    </div>
+    <div class="filter-row" id="filterRow"></div>
+  </div>
+  <div class="product-grid" id="productGrid"></div>
+</div>
+
+<!-- CART -->
+<div class="page" id="page-cart">
+  <div class="cart-wrap">
+    <h2>購物車</h2>
+    <div id="cartContent"></div>
+  </div>
+</div>
+
+<!-- CONTACT -->
+<div class="page" id="page-contact">
+  <div class="contact-wrap">
+    <h2>聯絡方式</h2>
+    <p class="sub">訂製詢問、場合規劃，或只是對紙藝有興趣——都很歡迎來找我聊。</p>
+    <div class="contact-channels">
+      <div class="channel-card">
+        <i class="ti ti-brand-instagram" aria-hidden="true"></i>
+        <h4>Instagram</h4>
+        <p>商品展示 / 私訊詢問</p>
+        <a href="https://instagram.com/" target="_blank">@mumu_huayuan</a>
+      </div>
+      <div class="channel-card">
+        <i class="ti ti-brand-facebook" aria-hidden="true"></i>
+        <h4>Facebook</h4>
+        <p>粉絲專頁 / 訊息聯絡</p>
+        <a href="https://facebook.com/" target="_blank">木木花願</a>
+      </div>
+      <div class="channel-card">
+        <i class="ti ti-map-pin" aria-hidden="true"></i>
+        <h4>地點</h4>
+        <p>台中市<br>可預約自取</p>
+      </div>
+      <div class="channel-card">
+        <i class="ti ti-clock" aria-hidden="true"></i>
+        <h4>製作時間</h4>
+        <p>下單後<br>5–10 個工作天</p>
+      </div>
+    </div>
+    <div class="form-section">
+      <h3>留言給薏仁</h3>
+      <div class="form-row">
+        <label>你的名字</label>
+        <input type="text" id="cName" placeholder="怎麼稱呼你？">
+      </div>
+      <div class="form-row">
+        <label>聯絡方式</label>
+        <input type="text" id="cContact" placeholder="電話、LINE ID 或 Instagram 帳號">
+      </div>
+      <div class="form-row">
+        <label>使用場合</label>
+        <select id="cOccasion">
+          <option value="">請選擇</option>
+          <option>清明 / 中元祭祀</option>
+          <option>神明誕辰敬獻</option>
+          <option>生日 / 壽誕</option>
+          <option>婚慶 / 慶典</option>
+          <option>其他</option>
+        </select>
+      </div>
+      <div class="form-row">
+        <label>想說的話</label>
+        <textarea id="cMsg" placeholder="想要什麼款式、有什麼特別的心意想傳達，都可以跟我說..."></textarea>
+      </div>
+      <button class="form-submit" onclick="submitForm()">送出留言</button>
+      <div class="form-success" id="formSuccess">
+        <i class="ti ti-check" style="font-size:20px;margin-bottom:8px;display:block"></i>
+        收到了！薏仁會盡快回覆你 :)
+      </div>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <span class="f-brand">木木花願 Mumu Huayuan</span>
+  <p class="f-copy">© 2025 木木花願 · 台中手作敬獻紙藝</p>
+</footer>
+
+<div class="toast" id="toast"></div>
+<button class="scroll-top" id="scrollTop" onclick="window.scrollTo({top:0,behavior:'smooth'});" aria-label="回到頂部"><i class="ti ti-arrow-up"></i></button>
+
+<script>
+const products = [
+  {id:1,name:'金紙花束',tag:'花束',desc:'手工經文紙花束，清明、節日皆宜',price:500,icon:'bouquet',cat:'花束'},
+  {id:2,name:'敬獻花籃',tag:'花籃',desc:'整籃手作紙花，莊重典雅的敬獻組合',price:680,icon:'basket',cat:'花籃'},
+  {id:3,name:'壽誕糕（小）',tag:'壽誕糕',desc:'三層手作紙藝蛋糕，適合壽星或神誕',price:450,icon:'cake',cat:'壽誕糕'},
+  {id:4,name:'壽誕糕（大）',tag:'壽誕糕',desc:'五層豪華版，層層疊疊滿心祝福',price:780,icon:'cake',cat:'壽誕糕'},
+  {id:5,name:'金紙花組合',tag:'金紙組合',desc:'傳統金紙結合現代花藝，敬獻更用心',price:320,icon:'gold',cat:'金紙組合'},
+  {id:6,name:'迷你花束（三入）',tag:'花束',desc:'小巧精緻，適合日常供桌擺放',price:240,icon:'mini',cat:'花束'},
+];
+
+const cart = {};
+
+function productIcon(t) {
+  if(t==='bouquet') return '<img src="images/S__23363605_0.jpg" alt="金紙花束" style="width:100%;height:100%;object-fit:cover;">';
+  if(t==='mini') return '<svg viewBox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg" style="width:52px;height:52px"><ellipse cx="28" cy="22" rx="7" ry="11" fill="none" stroke="#9AAE8A" stroke-width="1.2" transform="rotate(-18 28 22)"/><ellipse cx="28" cy="22" rx="7" ry="11" fill="none" stroke="#C4968A" stroke-width="1.2" transform="rotate(18 28 22)"/><ellipse cx="28" cy="22" rx="7" ry="11" fill="none" stroke="#6B7F5E" stroke-width="1.2" transform="rotate(55 28 22)"/><circle cx="28" cy="22" r="2.5" fill="#C4968A"/><line x1="28" y1="33" x2="28" y2="50" stroke="#9AAE8A" stroke-width="1.5"/></svg>';
+  if(t==='basket') return '<svg viewBox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg" style="width:52px;height:52px"><rect x="10" y="30" width="36" height="18" rx="2" fill="none" stroke="#8C6D52" stroke-width="1.2"/><path d="M10 34 Q28 22 46 34" fill="none" stroke="#C4968A" stroke-width="1.2"/><ellipse cx="28" cy="26" rx="5" ry="7" fill="none" stroke="#9AAE8A" stroke-width="1"/><ellipse cx="20" cy="28" rx="4" ry="5" fill="none" stroke="#C4968A" stroke-width="1" transform="rotate(-12 20 28)"/><ellipse cx="36" cy="28" rx="4" ry="5" fill="none" stroke="#6B7F5E" stroke-width="1" transform="rotate(12 36 28)"/></svg>';
+  if(t==='cake') return '<svg viewBox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg" style="width:52px;height:52px"><rect x="10" y="32" width="36" height="16" rx="1" fill="none" stroke="#8C6D52" stroke-width="1.2"/><rect x="14" y="24" width="28" height="10" rx="1" fill="none" stroke="#9AAE8A" stroke-width="1"/><rect x="18" y="17" width="20" height="9" rx="1" fill="none" stroke="#C4968A" stroke-width="1"/><line x1="28" y1="11" x2="28" y2="17" stroke="#C4968A" stroke-width="1"/><circle cx="28" cy="10" r="2" fill="#C4968A"/></svg>';
+  return '<svg viewBox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg" style="width:52px;height:52px"><path d="M28 8 L31 18 L42 18 L33 25 L36 36 L28 29 L20 36 L23 25 L14 18 L25 18 Z" fill="none" stroke="#C4968A" stroke-width="1.2"/><path d="M28 13 L30 20 L37 20 L31.5 24.5 L33.5 32 L28 27.5 L22.5 32 L24.5 24.5 L19 20 L26 20 Z" fill="none" stroke="#9AAE8A" stroke-width="0.8"/></svg>';
+}
+
+function renderShop(filter) {
+  const cats = ['全部', ...new Set(products.map(p => p.cat))];
+  document.getElementById('filterRow').innerHTML = cats.map(c =>
+    `<button class="filter-btn${(!filter&&c==='全部')||(filter===c)?' active':''}" onclick="renderShop('${c==='全部'?'':c}')">${c}</button>`
+  ).join('');
+  const list = filter ? products.filter(p => p.cat === filter) : products;
+  document.getElementById('productGrid').innerHTML = list.map(p => `
+    <div class="prod-card">
+      <div class="prod-img">${productIcon(p.icon)}</div>
+      <div class="prod-body">
+        <p class="prod-tag">${p.tag}</p>
+        <p class="prod-name">${p.name}</p>
+        <p class="prod-desc">${p.desc}</p>
+        <div class="prod-footer">
+          <span class="prod-price">NT$ ${p.price}</span>
+          <button class="add-btn" onclick="addCart(${p.id})" aria-label="加入購物車"><i class="ti ti-plus"></i></button>
+        </div>
+      </div>
+    </div>`).join('');
+}
+
+function renderPreview() {
+  document.getElementById('previewGrid').innerHTML = products.slice(0,4).map(p => `
+    <div class="preview-card" onclick="goPage('shop')">
+      <div class="p-icon">${productIcon(p.icon)}</div>
+      <h4>${p.name}</h4>
+      <p class="price">NT$ ${p.price}</p>
+    </div>`).join('');
+}
+
+function addCart(id) {
+  cart[id] = (cart[id] || 0) + 1;
+  updateBadge();
+  const p = products.find(x => x.id === id);
+  showToast('已加入：' + p.name);
+}
+
+function updateBadge() {
+  const n = Object.values(cart).reduce((a,b) => a+b, 0);
+  const b = document.getElementById('cartBadge');
+  b.textContent = n;
+  b.style.display = n > 0 ? 'flex' : 'none';
+}
+
+function renderCart() {
+  const keys = Object.keys(cart).filter(k => cart[k] > 0);
+  const el = document.getElementById('cartContent');
+  if (!keys.length) {
+    el.innerHTML = `<div class="empty-cart"><i class="ti ti-shopping-bag" aria-hidden="true"></i><p>購物車是空的<br>去看看喜歡的作品吧</p></div>
+    <div style="text-align:center;margin-top:20px"><button class="btn-outline" onclick="goPage('shop')">前往商品展示</button></div>`;
+    return;
+  }
+  const subtotal = keys.reduce((s,k) => { const p = products.find(x => x.id == k); return s + p.price * cart[k]; }, 0);
+  const ship = subtotal >= 800 ? 0 : 80;
+  el.innerHTML = keys.map(k => {
+    const p = products.find(x => x.id == k);
+    return `<div class="cart-item">
+      <div class="ci-icon">${productIcon(p.icon)}</div>
+      <div class="ci-info">
+        <p class="ci-name">${p.name}</p>
+        <p class="ci-tag">NT$ ${p.price}</p>
+      </div>
+      <div class="ci-controls">
+        <button class="qty-btn" onclick="changeQty(${k},-1)">−</button>
+        <span class="qty-num">${cart[k]}</span>
+        <button class="qty-btn" onclick="changeQty(${k},1)">+</button>
+      </div>
+      <span class="ci-price">NT$ ${p.price * cart[k]}</span>
+      <button class="ci-del" onclick="removeItem(${k})" aria-label="移除"><i class="ti ti-trash"></i></button>
+    </div>`;
+  }).join('') + `
+    <div class="cart-summary">
+      <div class="summary-row"><span>商品小計</span><span>NT$ ${subtotal}</span></div>
+      <div class="summary-row"><span>運費${subtotal>=800?'（滿 800 免運）':''}</span><span>${ship===0?'免運':'NT$ '+ship}</span></div>
+      <div class="summary-total"><span>合計</span><span>NT$ ${subtotal+ship}</span></div>
+    </div>
+    <button class="cart-cta" onclick="checkout()">前往結帳 →</button>
+    <p style="text-align:center;font-size:11px;color:var(--hint);margin-top:12px">結帳後薏仁會透過你的聯絡方式確認訂單</p>`;
+}
+
+function changeQty(id, d) {
+  cart[id] = Math.max(0, (cart[id] || 0) + d);
+  if (cart[id] === 0) delete cart[id];
+  updateBadge();
+  renderCart();
+}
+
+function removeItem(id) {
+  delete cart[id];
+  updateBadge();
+  renderCart();
+}
+
+function checkout() {
+  showToast('感謝你的訂單！薏仁會盡快聯絡你');
+  Object.keys(cart).forEach(k => delete cart[k]);
+  updateBadge();
+  setTimeout(() => renderCart(), 300);
+}
+
+function goPage(name) {
+  document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
+  document.getElementById('page-' + name).classList.add('active');
+  document.querySelectorAll('.nav-links a').forEach(a => {
+    a.classList.toggle('active', a.dataset.page === name);
+  });
+  if (name === 'shop') renderShop('');
+  if (name === 'cart') renderCart();
+  window.scrollTo(0, 0);
+}
+
+function showToast(msg) {
+  const t = document.getElementById('toast');
+  t.textContent = msg;
+  t.classList.add('show');
+  setTimeout(() => t.classList.remove('show'), 2200);
+}
+
+function submitForm() {
+  const n = document.getElementById('cName').value.trim();
+  const c = document.getElementById('cContact').value.trim();
+  if (!n || !c) { showToast('請填寫名字和聯絡方式'); return; }
+  document.getElementById('formSuccess').style.display = 'block';
+  document.querySelector('.form-submit').style.display = 'none';
+}
+
+renderPreview();
+window.addEventListener("scroll",function(){var b=document.getElementById("scrollTop");if(b){if(window.scrollY>200){b.classList.add("show");}else{b.classList.remove("show");}}});
+</script>
+</body>
+</html>
