@@ -137,9 +137,9 @@ button{cursor:pointer;font-family:'Noto Sans TC',sans-serif}
 .form-success{display:none;text-align:center;padding:24px;background:rgba(154,174,138,.1);border:1px solid var(--sage);font-size:13px;color:var(--moss);margin-top:16px}
 
 /* FOOTER */
-footer{background:#2d2620;padding:28px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px;margin-top:0}
-footer .f-brand{font-family:'Noto Serif TC',serif;font-size:14px;color:rgba(245,240,232,.6);letter-spacing:.1em}
-footer .f-copy{font-size:11px;color:rgba(245,240,232,.3);letter-spacing:.04em;width:100%}
+footer{background:#2d4a35;padding:28px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px;margin-top:0}
+footer .f-brand{font-family:'Noto Serif TC',serif;font-size:14px;color:#ffffff;letter-spacing:.1em}
+footer .f-copy{font-size:11px;color:rgba(255,255,255,.85);letter-spacing:.04em;width:100%}
 
 /* TOAST */
 .toast{position:fixed;bottom:24px;left:50%;transform:translateX(-50%) translateY(20px);background:var(--text);color:#fff;padding:10px 20px;font-size:12px;letter-spacing:.08em;opacity:0;transition:all .3s;pointer-events:none;z-index:999;white-space:nowrap}
@@ -175,9 +175,9 @@ footer .f-copy{font-size:11px;color:rgba(245,240,232,.3);letter-spacing:.04em;wi
 <!-- HOME -->
 <div class="page active" id="page-home">
   <div class="hero">
-    <p class="hero-label">木木花願 · 敬獻紙藝</p>
+    
     <h1 class="hero-title">用花傳遞心願<br>讓每一份<span>思念與祈願</span>都被看見</h1>
-    <p class="hero-sub">以雙手折疊紙藝，將最真誠的情感化為可以獻上的形狀</p>
+    
     <button class="btn-primary" onclick="goPage('shop')">探索作品</button>
   </div>
   <div class="home-features">
@@ -202,26 +202,19 @@ footer .f-copy{font-size:11px;color:rgba(245,240,232,.3);letter-spacing:.04em;wi
       <p>台中可自取，全台宅配安全到府</p>
     </div>
   </div>
-  <div class="home-preview">
-    <p class="section-label">精選作品</p>
-    <h2 class="section-title">每一款都是手工折疊，獨一無二</h2>
-    <div class="preview-grid" id="previewGrid"></div>
-    <button class="btn-outline" onclick="goPage('shop')">查看所有商品</button>
-  </div>
+
 </div>
 
 <!-- ABOUT -->
 <div class="page" id="page-about">
-  <div class="about-hero">
+  <div class="about-hero" style="grid-template-columns:1fr">
     <div class="about-text">
       <p class="section-label">關於木木花願</p>
       <h2>每一朵紙花<br>都有它要去的地方</h2>
-      <p>木木花願由手作師薏仁創立於台中，專注於手工敬獻紙藝。「木木」兩字來自姓氏「林」——兩棵木，是根，也是初心。</p>
-      <p>我相信，獻花不只是儀式，是一種對話——和逝去的人、和心中的神明、和那些還沒說出口的話。</p>
-    </div>
-    <div class="quote-block">
-      <p>「 用花傳遞心願，讓每一份思念與祈願都被看見。」</p>
-      <p class="q-author">— 薏仁 · 木木花願創辦人</p>
+      <p>「木木」兩字來自姓氏「林」——兩棵木，是根，也是初心。</p>
+      <p>花，是心意的形狀——看得見、摸得到的那份誠心。<br>願，是你想說的話——對神明、對離開的人、對自己。</p>
+      <p>木木花願，就是用花，把你的心願帶過去。</p>
+      <p>我相信獻花不只是儀式，是一種對話——<br>和逝去的人，和心中的神明，和那些還沒說出口的話。</p>
     </div>
   </div>
   <div class="about-values">
@@ -332,8 +325,8 @@ footer .f-copy{font-size:11px;color:rgba(245,240,232,.3);letter-spacing:.04em;wi
 </div>
 
 <footer>
-  <span class="f-brand">木木花願 Mumu Huayuan</span>
-  <p class="f-copy">© 2025 木木花願 · 台中手作敬獻紙藝</p>
+  <span class="f-brand">木木花願 MuMu Wishing Flower</span>
+  <p class="f-copy">© 2026 木木花願版權所有　網站內容、圖片與文案未經授權請勿轉載及使用</p>
 </footer>
 
 <div class="toast" id="toast"></div>
