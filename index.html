@@ -148,6 +148,12 @@ footer .f-copy{font-size:11px;color:rgba(255,255,255,.85);letter-spacing:.04em;w
 .scroll-top{position:fixed;bottom:24px;right:24px;width:44px;height:44px;border-radius:50%;background:var(--moss);color:#fff;border:none;font-size:20px;display:flex;align-items:center;justify-content:center;cursor:pointer;opacity:0;pointer-events:none;transition:all .3s;z-index:998}
 .scroll-top.show{opacity:1;pointer-events:auto}
 .scroll-top:hover{background:#5a6e4e}
+.home-contact{padding:60px 28px;text-align:center;border-top:1px solid var(--border)}
+.contact-icons{display:flex;justify-content:center;gap:24px;margin-top:28px;flex-wrap:wrap}
+.contact-icon-btn{display:flex;flex-direction:column;align-items:center;gap:10px;padding:24px 32px;background:var(--surface);border:1px solid var(--border);color:var(--muted);text-decoration:none;transition:all .25s;min-width:110px}
+.contact-icon-btn i{font-size:28px}
+.contact-icon-btn span{font-size:12px;letter-spacing:.1em}
+.contact-icon-btn:hover{border-color:var(--moss);color:var(--moss);background:#f5f9f3}
 @media(max-width:600px){
   .about-hero{grid-template-columns:1fr}
   .contact-channels{grid-template-columns:1fr}
@@ -164,7 +170,7 @@ footer .f-copy{font-size:11px;color:rgba(255,255,255,.85);letter-spacing:.04em;w
     <li><a onclick="goPage('home')" data-page="home">首頁</a></li>
     <li><a onclick="goPage('about')" data-page="about">品牌介紹</a></li>
     <li><a onclick="goPage('shop')" data-page="shop">商品展示</a></li>
-    <li><a onclick="goPage('contact')" data-page="contact">聯絡方式</a></li>
+    
   </ul>
   <button class="nav-cart" onclick="goPage('cart')" aria-label="購物車">
     <i class="ti ti-shopping-bag"></i>
@@ -203,20 +209,38 @@ footer .f-copy{font-size:11px;color:rgba(255,255,255,.85);letter-spacing:.04em;w
     </div>
   </div>
 
+  <!-- 聯絡方式 -->
+  <div class="home-contact">
+    <p class="section-label">聯絡我們</p>
+    <h2 class="section-title">有任何問題都歡迎找薏仁聊聊</h2>
+    <div class="contact-icons">
+      <a href="https://line.me/ti/p/@996ndkte" target="_blank" class="contact-icon-btn">
+        <i class="ti ti-brand-line"></i>
+        <span>LINE</span>
+      </a>
+      <a href="https://www.instagram.com/mumu_wishingflower" target="_blank" class="contact-icon-btn">
+        <i class="ti ti-brand-instagram"></i>
+        <span>Instagram</span>
+      </a>
+      <a href="https://www.facebook.com/profile.php?id=61578597026915" target="_blank" class="contact-icon-btn">
+        <i class="ti ti-brand-facebook"></i>
+        <span>Facebook</span>
+      </a>
+    </div>
+  </div>
+
 </div>
 
 <!-- ABOUT -->
 <div class="page" id="page-about">
-  <div class="about-hero">
+  <div class="about-hero" style="grid-template-columns:1fr">
     <div class="about-text">
       <p class="section-label">關於木木花願</p>
       <h2>每一朵紙花<br>都有它要去的地方</h2>
-      <p>木木花願由手作師薏仁創立於台中，專注於手工敬獻紙藝。「木木」兩字來自姓氏「林」——兩棵木，是根，也是初心。</p>
-      <p>我相信，獻花不只是儀式，是一種對話——和逝去的人、和心中的神明、和那些還沒說出口的話。</p>
-    </div>
-    <div class="quote-block">
-      <p>「 用花傳遞心願，讓每一份思念與祈願都被看見。」</p>
-      <p class="q-author">— 薏仁 · 木木花願創辦人</p>
+      <p>「木木」兩字來自姓氏「林」——兩棵木，是根，也是初心。</p>
+      <p>花，是心意的形狀——看得見、摸得到的那份誠心。<br>願，是你想說的話——對神明、對離開的人、對自己。</p>
+      <p>木木花願，就是用花，把你的心願帶過去。</p>
+      <p>我相信獻花不只是儀式，是一種對話——<br>和逝去的人，和心中的神明，和那些還沒說出口的話。</p>
     </div>
   </div>
   <div class="about-values">
