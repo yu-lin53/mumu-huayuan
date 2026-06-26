@@ -177,7 +177,9 @@ footer .f-copy{font-size:11px;color:rgba(255,255,255,.85);letter-spacing:.04em;w
 <body>
 
 <nav class="site-nav">
-  <img src="images/logo.png-removebg-preview.png" alt="木木花願" onclick="goPage('home')" style="height:230px;cursor:pointer;display:block;object-fit:contain;position:relative;z-index:1;">
+  <div style="position:relative;z-index:5;cursor:pointer" onclick="goPage('home')">
+  <img src="images/logo.png-removebg-preview.png" alt="木木花願" style="height:230px;display:block;object-fit:contain;pointer-events:none;">
+</div>
   <ul class="nav-links">
     <li><a onclick="goPage('home')" data-page="home">首頁</a></li>
     <li><a onclick="goPage('about')" data-page="about">品牌介紹</a></li>
