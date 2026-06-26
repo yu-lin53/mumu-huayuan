@@ -23,7 +23,7 @@ button{cursor:pointer;font-family:'Noto Sans TC',sans-serif}
 /* NAV */
 .site-nav{background:var(--surface);border-bottom:1px solid var(--border);display:flex;align-items:center;justify-content:space-between;padding:0 28px;height:68px;position:sticky;top:0;z-index:200}
 .nav-brand{font-family:'Noto Serif TC',serif;font-size:16px;font-weight:400;color:var(--moss);letter-spacing:.12em;cursor:pointer}
-.nav-links{display:flex;gap:0;list-style:none;position:absolute;bottom:12px;right:80px;z-index:10}
+.nav-links{display:flex;gap:0;list-style:none}
 .nav-links li a{display:block;padding:0 14px;font-size:12px;letter-spacing:.08em;color:var(--muted);cursor:pointer;transition:color .2s;line-height:68px}
 .nav-links li a:hover,.nav-links li a.active{color:var(--moss)}
 .nav-cart{position:relative;cursor:pointer;padding:8px;color:var(--muted);transition:color .2s;background:none;border:none;font-size:20px}
@@ -177,14 +177,11 @@ footer .f-copy{font-size:11px;color:rgba(255,255,255,.85);letter-spacing:.04em;w
 <body>
 
 <nav class="site-nav">
-  <div style="position:relative;z-index:5;cursor:pointer" onclick="goPage('home')">
-  <img src="images/logo.png-removebg-preview.png" alt="木木花願" style="height:230px;display:block;object-fit:contain;pointer-events:none;">
-</div>
+  <img src="images/logo.png-removebg-preview.png" alt="木木花願" onclick="goPage('home')" style="height:80px;cursor:pointer;display:block;object-fit:contain;">
   <ul class="nav-links">
     <li><a onclick="goPage('home')" data-page="home">首頁</a></li>
     <li><a onclick="goPage('about')" data-page="about">品牌介紹</a></li>
     <li><a onclick="goPage('shop')" data-page="shop">商品展示</a></li>
-    
   </ul>
   <button class="nav-cart" onclick="goPage('cart')" aria-label="購物車">
     <i class="ti ti-shopping-bag"></i>
