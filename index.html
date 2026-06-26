@@ -280,7 +280,7 @@ footer .f-copy{font-size:11px;color:rgba(255,255,255,.85);letter-spacing:.04em;w
 
 <script>
 const products = [
-  {id:1,name:'迷你金紙花束',tag:'',desc:'使用福金金紙製作',price:399,price2:780,icon:'bouquet',cat:'花束'},
+  {id:1,name:'迷你金紙花束',tag:'',desc:'使用福金金紙製作',price:399,icon:'bouquet',cat:'花束'},
   {id:2,name:'敬獻花籃',tag:'花籃',desc:'整籃手作紙花，莊重典雅的敬獻組合',price:680,icon:'basket',cat:'花籃'},
   {id:3,name:'壽誕糕（小）',tag:'壽誕糕',desc:'三層手作紙藝蛋糕，適合壽星或神誕',price:450,icon:'cake',cat:'壽誕糕'},
   {id:4,name:'壽誕糕（大）',tag:'壽誕糕',desc:'五層豪華版，層層疊疊滿心祝福',price:780,icon:'cake',cat:'壽誕糕'},
@@ -325,7 +325,7 @@ function renderShop(filter) {
         <p class="prod-name">${p.name}</p>
         <p class="prod-desc">${p.desc}</p>
         <div class="prod-footer">
-          <span class="prod-price">${p.price2 ? `一束 NT$${p.price}／一對 NT$${p.price2}` : `NT$ ${p.price}`}</span>
+          <span class="prod-price">${}</span>
           <button class="add-btn" onclick="addCart(${p.id})"><i class="ti ti-plus"></i></button>
         </div>
       </div>
