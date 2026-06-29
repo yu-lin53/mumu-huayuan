@@ -280,12 +280,13 @@ footer .f-copy{font-size:11px;color:rgba(255,255,255,.85);letter-spacing:.04em;w
 
 <script>
 const products = [
-  {id:1,name:'迷你金紙花束',tag:'',desc:'使用福金金紙製作',price:399,icon:'bouquet',cat:'花束'},
-  {id:2,name:'中型金紙花束',tag:'',desc:'使用壽金金紙製作',price:699,icon:'basket',cat:'花束'},
-  {id:3,name:'大悲神咒經文紙花束',tag:'',desc:'使用大悲咒經文紙製作<br>以菩薩大悲心加持，能清淨業障，轉危為安，庇佑平安健康，助亡靈超拔往生<br>用途：觀音信仰、超渡法會、消災解厄<br>常見於：佛前供奉、祖先祭祀、普渡法會',price:1280,icon:'cake',cat:'經文紙花束'},
-  {id:4,name:'彩虹花束',tag:'',desc:'使用壽生經經文紙製作<br>依《壽生經》法意，具延壽補運之能<br>用途：延年益壽、還壽生債<br>常見於：祝壽、祈福、還願還庫',price:1280,icon:'rainbow',cat:'經文紙花束'},
+  {id:1,name:'迎福花束',tag:'',desc:'使用福金金紙製作',price:399,icon:'bouquet',cat:'花束'},
+  {id:2,name:'吉祥花束',tag:'',desc:'使用壽金金紙製作',price:699,icon:'basket',cat:'花束'},
+  {id:3,name:'慈佑花束',tag:'',desc:'使用大悲咒經文紙製作<br>以菩薩大悲心加持，能清淨業障，轉危為安，庇佑平安健康，助亡靈超拔往生<br>用途：觀音信仰、超渡法會、消災解厄<br>常見於：佛前供奉、祖先祭祀、普渡法會',price:1280,icon:'cake',cat:'經文紙花束'},
+  {id:4,name:'彩願花束',tag:'',desc:'使用壽生經經文紙製作<br>依《壽生經》法意，具延壽補運之能<br>用途：延年益壽、還壽生債<br>常見於：祝壽、祈福、還願還庫',price:1280,icon:'rainbow',cat:'經文紙花束'},
 
 
+  ,{id:5,name:'追思小花束',tag:'',desc:'使用小銀製作<br>用途：清明祭祖、中元普渡、重陽節、忌日、百日、對年、做七、法會祭拜祖先<br>「小銀」面額比大銀小，多用來祭拜亡魂或普渡時祭拜先祖和陰間鬼差<br>（去世未滿三年僅能用大銀、小銀等銀紙）',price:399,icon:'memorial',cat:'祭祀花束'}
 ];
 
 const cart = {};
@@ -332,6 +333,20 @@ function productIcon(t) {
       <button class="slider-dot active" onclick="slideTo(event,'slider-3',0)"></button>
       <button class="slider-dot" onclick="slideTo(event,'slider-3',1)"></button>
       <button class="slider-dot" onclick="slideTo(event,'slider-3',2)"></button>
+    </div>
+  </div>`;
+  if(t==='memorial') return `<div class="slider-wrap">
+    <div class="slider-track" id="slider-5">
+      <img src="images/LINE_ALBUM_2026626_260626_19.jpg" alt="追思小花束1">
+      <img src="images/LINE_ALBUM_2026626_260626_20.jpg" alt="追思小花束2">
+      <img src="images/LINE_ALBUM_2026626_260626_22.jpg" alt="追思小花束3">
+    </div>
+    <button class="slider-btn prev" onclick="slideImg(event,'slider-5',-1)">&#8249;</button>
+    <button class="slider-btn next" onclick="slideImg(event,'slider-5',1)">&#8250;</button>
+    <div class="slider-dots">
+      <button class="slider-dot active" onclick="slideTo(event,'slider-5',0)"></button>
+      <button class="slider-dot" onclick="slideTo(event,'slider-5',1)"></button>
+      <button class="slider-dot" onclick="slideTo(event,'slider-5',2)"></button>
     </div>
   </div>`;
   if(t==='rainbow') return `<div class="slider-wrap">
