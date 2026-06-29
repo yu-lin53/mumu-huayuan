@@ -282,7 +282,7 @@ footer .f-copy{font-size:11px;color:rgba(255,255,255,.85);letter-spacing:.04em;w
 const products = [
   {id:1,name:'迷你金紙花束',tag:'',desc:'使用福金金紙製作',price:399,icon:'bouquet',cat:'花束'},
   {id:2,name:'中型金紙花束',tag:'',desc:'使用壽金金紙製作',price:699,icon:'basket',cat:'花束'},
-  {id:3,name:'大悲神咒經文紙花束',tag:'',desc:'用途：觀音信仰、超渡法會、消災解厄',price:1280,icon:'cake',cat:'經文紙花束'},
+  {id:3,name:'大悲神咒經文紙花束',tag:'',desc:'使用大悲咒經文紙製作<br>以菩薩大悲心加持，能清淨業障，轉危為安，庇佑平安健康，助亡靈超拔往生<br>用途：觀音信仰、超渡法會、消災解厄<br>常見於：佛前供奉、祖先祭祀、普渡法會',price:1280,icon:'cake',cat:'經文紙花束'},
   {id:4,name:'彩虹花束',tag:'',desc:'使用壽生經經文紙，依《壽生經》法意具延壽補運之能，用途：還壽生債、補財庫、祝壽、祈福、還庫補運',price:1280,icon:'rainbow',cat:'經文紙花束'},
   {id:5,name:'金紙花組合',tag:'金紙組合',desc:'傳統金紙結合現代花藝，敬獻更用心',price:320,icon:'gold',cat:'金紙組合'},
   {id:6,name:'迷你花束（三入）',tag:'花束',desc:'小巧精緻，適合日常供桌擺放',price:240,icon:'mini',cat:'花束'},
@@ -360,7 +360,7 @@ function renderShop(filter) {
       <div class="prod-body">
         ${p.tag ? `<p class="prod-tag">${p.tag}</p>` : ''}
         <p class="prod-name">${p.name}</p>
-        <p class="prod-desc">${p.desc}</p>
+        <p class="prod-desc" style="white-space:normal">${p.desc}</p>
         <div class="prod-footer">
           <span class="prod-price">NT$ ${p.price}</span>
           <button class="add-btn" onclick="addCart(${p.id})"><i class="ti ti-plus"></i></button>
