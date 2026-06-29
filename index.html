@@ -255,7 +255,7 @@ footer .f-copy{font-size:11px;color:rgba(255,255,255,.85);letter-spacing:.04em;w
       <p class="section-label" style="margin-bottom:4px">商品展示</p>
       <h2>所有作品</h2>
     </div>
-    <div class="filter-row" id="filterRow"></div>
+
   </div>
   <div class="product-grid" id="productGrid"></div>
 </div>
@@ -312,10 +312,7 @@ function productIcon(t) {
 }
 
 function renderShop(filter) {
-  const cats = ['全部', ...new Set(products.map(p => p.cat))];
-  document.getElementById('filterRow').innerHTML = cats.map(c =>
-    `<button class="filter-btn${(!filter&&c==='全部')||(filter===c)?' active':''}" onclick="renderShop('${c==='全部'?'':c}')">${c}</button>`
-  ).join('');
+
   const list = filter ? products.filter(p => p.cat === filter) : products;
   document.getElementById('productGrid').innerHTML = list.map(p => `
     <div class="prod-card">
