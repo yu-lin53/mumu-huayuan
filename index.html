@@ -283,7 +283,7 @@ const products = [
   {id:1,name:'迷你金紙花束',tag:'',desc:'使用福金金紙製作',price:399,icon:'bouquet',cat:'花束'},
   {id:2,name:'中型金紙花束',tag:'',desc:'使用壽金金紙製作',price:699,icon:'basket',cat:'花束'},
   {id:3,name:'大悲神咒經文紙花束',tag:'',desc:'用途：觀音信仰、超渡法會、消災解厄',price:1280,icon:'cake',cat:'經文紙花束'},
-  {id:4,name:'壽誕糕（大）',tag:'壽誕糕',desc:'五層豪華版，層層疊疊滿心祝福',price:780,icon:'cake',cat:'壽誕糕'},
+  {id:4,name:'彩虹花束',tag:'',desc:'使用壽生經經文紙，依《壽生經》法意具延壽補運之能，用途：還壽生債、補財庫、祝壽、祈福、還庫補運',price:1280,icon:'rainbow',cat:'經文紙花束'},
   {id:5,name:'金紙花組合',tag:'金紙組合',desc:'傳統金紙結合現代花藝，敬獻更用心',price:320,icon:'gold',cat:'金紙組合'},
   {id:6,name:'迷你花束（三入）',tag:'花束',desc:'小巧精緻，適合日常供桌擺放',price:240,icon:'mini',cat:'花束'},
 ];
@@ -332,6 +332,20 @@ function productIcon(t) {
       <button class="slider-dot active" onclick="slideTo(event,'slider-3',0)"></button>
       <button class="slider-dot" onclick="slideTo(event,'slider-3',1)"></button>
       <button class="slider-dot" onclick="slideTo(event,'slider-3',2)"></button>
+    </div>
+  </div>`;
+  if(t==='rainbow') return `<div class="slider-wrap">
+    <div class="slider-track" id="slider-4">
+      <img src="images/LINE_ALBUM_2026626_260626_16.jpg" alt="彩虹花束1">
+      <img src="images/LINE_ALBUM_2026626_260626_17.jpg" alt="彩虹花束2">
+      <img src="images/LINE_ALBUM_2026626_260626_28.jpg" alt="彩虹花束3">
+    </div>
+    <button class="slider-btn prev" onclick="slideImg(event,'slider-4',-1)">&#8249;</button>
+    <button class="slider-btn next" onclick="slideImg(event,'slider-4',1)">&#8250;</button>
+    <div class="slider-dots">
+      <button class="slider-dot active" onclick="slideTo(event,'slider-4',0)"></button>
+      <button class="slider-dot" onclick="slideTo(event,'slider-4',1)"></button>
+      <button class="slider-dot" onclick="slideTo(event,'slider-4',2)"></button>
     </div>
   </div>`;
   return '<svg viewBox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg" style="width:52px;height:52px"><path d="M28 8 L31 18 L42 18 L33 25 L36 36 L28 29 L20 36 L23 25 L14 18 L25 18 Z" fill="none" stroke="#C4968A" stroke-width="1.2"/></svg>';
