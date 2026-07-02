@@ -339,6 +339,8 @@ function productIcon(t) {
       <button class="slider-dot" onclick="slideTo(event,'slider-3',2)"></button>
     </div>
   </div>`;
+  if(t==='basket_s') return `<div class="slider-wrap"><div class="slider-track" id="slider-6"><img src="images/LINE_ALBUM_2026626_260629_3.jpg" alt="花籃小型款"></div></div>`;
+  if(t==='basket_m') return `<div class="slider-wrap"><div class="slider-track" id="slider-7"><img src="images/LINE_ALBUM_2026626_260702_4.jpg" alt="花籃中型款"></div></div>`;
   if(t==='memorial') return `<div class="slider-wrap">
     <div class="slider-track" id="slider-5">
       <img src="images/LINE_ALBUM_2026626_260626_19.jpg" alt="追思小花束1">
@@ -373,7 +375,20 @@ function productIcon(t) {
 function renderShop(filter) {
 
   const list = filter ? products.filter(p => p.cat === filter) : products;
-  document.getElementById('productGrid').innerHTML = list.map(p => `
+  const bouquets = list.filter(p => p.cat !== '花籃');
+  const baskets = list.filter(p => p.cat === '花籃');
+  
+  const bouquetHTML = bouquets.length ? `
+    <div style="grid-column:1/-1;padding:24px 16px 8px;background:var(--cream);border-bottom:1px solid var(--border)">
+      <p style="font-size:11px;letter-spacing:.28em;color:var(--rose);margin-bottom:4px">精緻祈福花束</p>
+    </div>` : '';
+  
+  const basketHTML = baskets.length ? `
+    <div style="grid-column:1/-1;padding:24px 16px 8px;background:var(--cream);border-bottom:1px solid var(--border)">
+      <p style="font-size:11px;letter-spacing:.28em;color:var(--rose);margin-bottom:4px">精緻祈福花籃</p>
+    </div>` : '';
+
+  document.getElementById('productGrid').innerHTML = bouquetHTML + bouquets.map(p => `
     <div class="prod-card">
       <div class="prod-img">${productIcon(p.icon)}</div>
       <div class="prod-body">
@@ -385,6 +400,16 @@ function renderShop(filter) {
         </div>
         <div style="display:flex;gap:6px;margin-top:10px;flex-wrap:wrap">
           <a href="https://myship.7-11.com.tw/general/detail/GM2605179486685" target="_blank" class="buy-btn">賣貨便下單</a>
+          <a href="https://line.me/ti/p/@996ndkte" target="_blank" class="buy-btn-line">LINE詢問</a>
+        </div>
+      </div>
+    </div>`).join('') + basketHTML + baskets.map(p => `
+    <div class="prod-card">
+      <div class="prod-img">${productIcon(p.icon)}</div>
+      <div class="prod-body">
+        <p class="prod-name">${p.name}</p>
+        <p class="prod-desc" style="white-space:normal">${p.desc}</p>
+        <div style="display:flex;gap:6px;margin-top:10px;flex-wrap:wrap">
           <a href="https://line.me/ti/p/@996ndkte" target="_blank" class="buy-btn-line">LINE詢問</a>
         </div>
       </div>
