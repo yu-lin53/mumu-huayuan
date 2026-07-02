@@ -87,6 +87,8 @@ button{cursor:pointer;font-family:'Noto Sans TC',sans-serif}
 .add-btn{width:28px;height:28px;border:1px solid var(--moss);background:transparent;color:var(--moss);font-size:16px;display:flex;align-items:center;justify-content:center;transition:all .2s}
 .buy-btn{display:inline-block;padding:6px 14px;background:var(--moss);color:#fff;font-size:11px;letter-spacing:.1em;text-decoration:none;transition:background .25s;white-space:nowrap}
 .buy-btn:hover{background:#5a6e4e}
+.buy-btn-line{display:inline-block;padding:6px 14px;background:#06C755;color:#fff;font-size:11px;letter-spacing:.1em;text-decoration:none;transition:background .25s;white-space:nowrap}
+.buy-btn-line:hover{background:#05a847}
 .add-btn:hover{background:var(--moss);color:#fff}
 
 /* SLIDER */
@@ -253,7 +255,10 @@ footer .f-copy{font-size:11px;color:rgba(255,255,255,.85);letter-spacing:.04em;w
       <p class="section-label" style="margin-bottom:4px">商品展示</p>
       <h2 style="font-size:28px">精緻祈福花束</h2>
     </div>
-    <p style="font-size:12px;color:var(--muted);line-height:1.8;max-width:360px"><span style="color:var(--rose);font-weight:500">貼心提醒：</span>金紙種類因地區、廟宇及信仰習俗而異，建議依實際祭祀需求選購。</p>
+    <div style="display:flex;flex-direction:column;gap:6px">
+      <p style="font-size:12px;color:var(--muted);line-height:1.8"><span style="color:var(--rose);font-weight:500">貼心提醒：</span>金紙種類因地區、廟宇及信仰習俗而異，建議依實際祭祀需求選購。</p>
+      <p style="font-size:12px;color:var(--muted);line-height:1.8"><span style="color:var(--moss);font-weight:500">🎨 客製化：</span>使用經文紙製作的花束均可客製化顏色，歡迎<a href="https://line.me/ti/p/@996ndkte" target="_blank" style="color:var(--moss);text-decoration:underline">加入LINE好友</a>聊聊！</p>
+    </div>
 
   </div>
   <div class="product-grid" id="productGrid"></div>
@@ -377,7 +382,10 @@ function renderShop(filter) {
         <p class="prod-desc" style="white-space:normal">${p.desc}</p>
         <div class="prod-footer">
           <span class="prod-price">NT$ ${p.price}</span>
-          <a href="https://myship.7-11.com.tw/general/detail/GM2605179486685" target="_blank" class="buy-btn">立即購買</a>
+        </div>
+        <div style="display:flex;gap:6px;margin-top:10px;flex-wrap:wrap">
+          <a href="https://myship.7-11.com.tw/general/detail/GM2605179486685" target="_blank" class="buy-btn">賣貨便下單</a>
+          <a href="https://line.me/ti/p/@996ndkte" target="_blank" class="buy-btn-line">LINE詢問</a>
         </div>
       </div>
     </div>`).join('');
