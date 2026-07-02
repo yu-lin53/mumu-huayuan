@@ -11,15 +11,14 @@
 <style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 :root{
-  --moss:#6B7F5E;--sage:#9AAE8A;--cream:#F5F0E8;--brown:#8C6D52;--rose:#C4968A;
-  --bg:#F5F0E8;--surface:#fff;--border:rgba(140,109,82,0.15);
-  --text:#2e2620;--muted:#7a6658;--hint:#b09a8c;
+--moss:#6B7F5E;--sage:#9AAE8A;--cream:#F5F0E8;--brown:#8C6D52;--rose:#C4968A;
+--bg:#F5F0E8;--surface:#fff;--border:rgba(140,109,82,0.15);
+--text:#2e2620;--muted:#7a6658;--hint:#b09a8c;
 }
 html{scroll-behavior:smooth}
 body{background:var(--bg);color:var(--text);font-family:'Noto Sans TC',sans-serif;font-weight:300;font-size:14px;line-height:1.8}
 a{text-decoration:none;color:inherit}
 button{cursor:pointer;font-family:'Noto Sans TC',sans-serif}
-
 /* NAV */
 .site-nav{background:var(--surface);border-bottom:1px solid var(--border);display:flex;align-items:center;justify-content:space-between;padding:0 28px;height:80px;position:sticky;top:0;z-index:100}
 .nav-logo{height:80px;max-width:280px;cursor:pointer;display:block;object-fit:contain}
@@ -30,11 +29,9 @@ button{cursor:pointer;font-family:'Noto Sans TC',sans-serif}
 .nav-cart{position:relative;cursor:pointer;padding:8px;color:var(--muted);transition:color .2s;background:none;border:none;font-size:20px}
 .nav-cart:hover{color:var(--moss)}
 .cart-badge{position:absolute;top:2px;right:2px;width:16px;height:16px;border-radius:50%;background:var(--rose);color:#fff;font-size:10px;display:none;align-items:center;justify-content:center;font-weight:500}
-
 /* PAGES */
 .page{display:none}
 .page.active{display:block}
-
 /* HOME */
 .hero{padding:80px 28px 72px;text-align:center;border-bottom:1px solid var(--border)}
 .hero-title{font-family:'Noto Serif TC',serif;font-size:clamp(26px,5vw,44px);font-weight:300;color:var(--text);line-height:1.6;margin-bottom:32px}
@@ -43,13 +40,11 @@ button{cursor:pointer;font-family:'Noto Sans TC',sans-serif}
 .btn-primary:hover{background:#5a6e4e}
 .btn-outline{display:inline-block;padding:9px 24px;border:1px solid var(--moss);color:var(--moss);font-size:12px;letter-spacing:.15em;background:transparent;transition:all .25s;cursor:pointer}
 .btn-outline:hover{background:var(--moss);color:#fff}
-
 .home-features{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:1px;background:var(--border);border-top:1px solid var(--border);border-bottom:1px solid var(--border)}
 .feature-item{background:var(--surface);padding:32px 20px;text-align:center}
 .feature-icon{font-size:22px;color:var(--sage);margin-bottom:12px}
 .feature-item h3{font-family:'Noto Serif TC',serif;font-size:14px;font-weight:400;color:var(--text);margin-bottom:6px}
 .feature-item p{font-size:12px;color:var(--muted);line-height:1.8}
-
 .home-contact{padding:60px 28px;text-align:center;border-top:1px solid var(--border)}
 .section-label{font-size:11px;letter-spacing:.28em;color:var(--rose);margin-bottom:8px}
 .section-title{font-family:'Noto Serif TC',serif;font-size:20px;font-weight:300;color:var(--text);margin-bottom:32px}
@@ -58,7 +53,6 @@ button{cursor:pointer;font-family:'Noto Sans TC',sans-serif}
 .contact-icon-btn i{font-size:28px}
 .contact-icon-btn span{font-size:12px;letter-spacing:.1em}
 .contact-icon-btn:hover{border-color:var(--moss);color:var(--moss);background:#f5f9f3}
-
 /* ABOUT */
 .about-hero{padding:60px 28px;border-bottom:1px solid var(--border);display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:start;max-width:800px;margin:0 auto}
 .about-text p{font-size:13px;color:var(--muted);line-height:2.1;margin-bottom:12px}
@@ -67,7 +61,6 @@ button{cursor:pointer;font-family:'Noto Sans TC',sans-serif}
 .val-item .vi-label{font-size:10px;letter-spacing:.25em;color:var(--rose);margin-bottom:8px}
 .val-item h3{font-family:'Noto Serif TC',serif;font-size:15px;font-weight:300;color:var(--text);margin-bottom:8px}
 .val-item p{font-size:12px;color:var(--muted);line-height:1.9}
-
 /* SHOP */
 .shop-header{padding:40px 28px 28px;border-bottom:1px solid var(--border);display:flex;align-items:baseline;justify-content:space-between;flex-wrap:wrap;gap:12px}
 .shop-header h2{font-family:'Noto Serif TC',serif;font-size:20px;font-weight:300}
@@ -90,7 +83,6 @@ button{cursor:pointer;font-family:'Noto Sans TC',sans-serif}
 .buy-btn-line{display:inline-block;padding:6px 14px;background:#06C755;color:#fff;font-size:11px;letter-spacing:.1em;text-decoration:none;transition:background .25s;white-space:nowrap}
 .buy-btn-line:hover{background:#05a847}
 .add-btn:hover{background:var(--moss);color:#fff}
-
 /* SLIDER */
 .slider-wrap{position:relative;width:100%;height:220px;overflow:hidden}
 .slider-track{display:flex;height:220px;overflow-x:hidden;scroll-snap-type:x mandatory}
@@ -101,7 +93,6 @@ button{cursor:pointer;font-family:'Noto Sans TC',sans-serif}
 .slider-dots{display:flex;justify-content:center;gap:5px;padding:5px 0;background:var(--surface);border-bottom:1px solid var(--border)}
 .slider-dot{width:6px;height:6px;border-radius:50%;background:var(--border);border:none;cursor:pointer;padding:0;transition:background .2s}
 .slider-dot.active{background:var(--moss)}
-
 /* CART */
 .cart-wrap{max-width:560px;margin:0 auto;padding:40px 28px}
 .cart-wrap h2{font-family:'Noto Serif TC',serif;font-size:20px;font-weight:300;margin-bottom:28px;padding-bottom:16px;border-bottom:1px solid var(--border)}
@@ -125,386 +116,367 @@ button{cursor:pointer;font-family:'Noto Sans TC',sans-serif}
 .summary-total{display:flex;justify-content:space-between;font-size:16px;font-weight:500;color:var(--text);padding-top:12px;margin-top:12px;border-top:1px solid var(--border)}
 .cart-cta{margin-top:16px;width:100%;padding:12px;background:var(--moss);color:#fff;border:none;font-size:13px;letter-spacing:.15em;transition:background .25s}
 .cart-cta:hover{background:#5a6e4e}
-
 /* FOOTER */
 footer{background:#2d4a35;padding:28px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px}
 footer .f-brand{font-family:'Noto Serif TC',serif;font-size:14px;color:#fff;letter-spacing:.1em}
 footer .f-copy{font-size:11px;color:rgba(255,255,255,.85);letter-spacing:.04em;width:100%}
-
 /* SCROLL TOP */
 .scroll-top{position:fixed;bottom:24px;right:24px;width:44px;height:44px;border-radius:50%;background:var(--moss);color:#fff;border:none;font-size:20px;display:flex;align-items:center;justify-content:center;cursor:pointer;opacity:0;pointer-events:none;transition:all .3s;z-index:998}
 .scroll-top.show{opacity:1;pointer-events:auto}
 .scroll-top:hover{background:#5a6e4e}
-
 /* TOAST */
 .toast{position:fixed;bottom:24px;left:50%;transform:translateX(-50%) translateY(20px);background:var(--text);color:#fff;padding:10px 20px;font-size:12px;letter-spacing:.08em;opacity:0;transition:all .3s;pointer-events:none;z-index:999;white-space:nowrap}
 .toast.show{opacity:1;transform:translateX(-50%) translateY(0)}
-
 @media(max-width:600px){
-  .about-hero{grid-template-columns:1fr}
-  .shop-header{flex-direction:column;gap:16px}
-  .site-nav{flex-wrap:wrap;height:auto;padding:8px 16px;gap:4px}
-  .nav-right{width:100%;border-top:1px solid var(--border);padding-top:4px;justify-content:flex-end}
-  .nav-links li a{line-height:2;padding:4px 10px}
-  .nav-logo{height:48px}
+.about-hero{grid-template-columns:1fr}
+.shop-header{flex-direction:column;gap:16px}
+.site-nav{flex-wrap:wrap;height:auto;padding:8px 16px;gap:4px}
+.nav-right{width:100%;border-top:1px solid var(--border);padding-top:4px;justify-content:flex-end}
+.nav-links li a{line-height:2;padding:4px 10px}
+.nav-logo{height:48px}
 }
 </style>
 </head>
 <body>
-
 <nav class="site-nav">
-  <img class="nav-logo" src="images/LOGO.2.jpg" alt="木木花願" onclick="goPage('home')">
-  <div class="nav-right">
-    <ul class="nav-links">
-      <li><a onclick="goPage('home')" data-page="home">首頁</a></li>
-      <li><a onclick="goPage('about')" data-page="about">品牌介紹</a></li>
-      <li><a onclick="goPage('shop')" data-page="shop">商品展示</a></li>
-    </ul>
-  </div>
+<img class="nav-logo" src="images/LOGO.2.jpg" alt="木木花願" onclick="goPage('home')">
+<div class="nav-right">
+<ul class="nav-links">
+<li><a onclick="goPage('home')" data-page="home">首頁</a></li>
+<li><a onclick="goPage('about')" data-page="about">品牌介紹</a></li>
+<li><a onclick="goPage('shop')" data-page="shop">商品展示</a></li>
+</ul>
+</div>
 </nav>
 
 <!-- HOME -->
 <div class="page active" id="page-home">
-  <div class="hero">
-    <h1 class="hero-title">用花傳遞心願<br>讓每一份<span>思念與祈願</span>都被看見</h1>
-    <button class="btn-primary" onclick="goPage('shop')">探索作品</button>
-  </div>
-  <div class="home-features">
-    <div class="feature-item">
-      <div class="feature-icon"><i class="ti ti-hand-stop"></i></div>
-      <h3>全手工製作</h3>
-      <p>每一朵花都是親手折疊，不依賴模板</p>
-    </div>
-    <div class="feature-item">
-      <div class="feature-icon"><i class="ti ti-heart"></i></div>
-      <h3>客製化服務</h3>
-      <p>依照場合與心意調整款式與組合</p>
-    </div>
-    <div class="feature-item">
-      <div class="feature-icon"><i class="ti ti-leaf"></i></div>
-      <h3>敬獻文化傳承</h3>
-      <p>結合傳統敬獻禮俗，賦予現代美感</p>
-    </div>
-    <div class="feature-item">
-      <div class="feature-icon"><i class="ti ti-package"></i></div>
-      <h3>精心包裝寄送</h3>
-      <p>台中可自取，全台宅配安全到府</p>
-    </div>
-  </div>
-  <div class="home-contact">
-    <p class="section-label">聯絡我們</p>
-    
-    <div class="contact-icons">
-      <a href="https://line.me/ti/p/@996ndkte" target="_blank" class="contact-icon-btn">
-        <i class="ti ti-brand-line"></i>
-        <span>LINE</span>
-      </a>
-      <a href="https://www.instagram.com/mumu_wishingflower" target="_blank" class="contact-icon-btn">
-        <i class="ti ti-brand-instagram"></i>
-        <span>Instagram</span>
-      </a>
-      <a href="https://www.facebook.com/profile.php?id=61578597026915" target="_blank" class="contact-icon-btn">
-        <i class="ti ti-brand-facebook"></i>
-        <span>Facebook</span>
-      </a>
-    </div>
-  </div>
+<div class="hero">
+<h1 class="hero-title">用花傳遞心願<br>讓每一份<span>思念與祈願</span>都被看見</h1>
+<button class="btn-primary" onclick="goPage('shop')">探索作品</button>
+</div>
+<div class="home-features">
+<div class="feature-item">
+<div class="feature-icon"><i class="ti ti-hand-stop"></i></div>
+<h3>全手工製作</h3>
+<p>每一朵花都是親手折疊，不依賴模板</p>
+</div>
+<div class="feature-item">
+<div class="feature-icon"><i class="ti ti-heart"></i></div>
+<h3>客製化服務</h3>
+<p>依照場合與心意調整款式與組合</p>
+</div>
+<div class="feature-item">
+<div class="feature-icon"><i class="ti ti-leaf"></i></div>
+<h3>敬獻文化傳承</h3>
+<p>結合傳統敬獻禮俗，賦予現代美感</p>
+</div>
+<div class="feature-item">
+<div class="feature-icon"><i class="ti ti-package"></i></div>
+<h3>精心包裝寄送</h3>
+<p>台中可自取，全台宅配安全到府</p>
+</div>
+</div>
+<div class="home-contact">
+<p class="section-label">聯絡我們</p>
+<div class="contact-icons">
+<a href="https://line.me/ti/p/@996ndkte" target="_blank" class="contact-icon-btn">
+<i class="ti ti-brand-line"></i>
+<span>LINE</span>
+</a>
+<a href="https://www.instagram.com/mumu_wishingflower" target="_blank" class="contact-icon-btn">
+<i class="ti ti-brand-instagram"></i>
+<span>Instagram</span>
+</a>
+<a href="https://www.facebook.com/profile.php?id=61578597026915" target="_blank" class="contact-icon-btn">
+<i class="ti ti-brand-facebook"></i>
+<span>Facebook</span>
+</a>
+</div>
+</div>
 </div>
 
 <!-- ABOUT -->
 <div class="page" id="page-about">
-  <div class="about-hero">
-    <div>
-      <h2 style="font-family:'LXGW WenKai TC','Noto Serif TC',serif;font-size:clamp(28px,4vw,48px);color:var(--moss);line-height:1.6;font-weight:400">關於<br>木木花願</h2>
-    </div>
-    <div class="about-text">
-      <p>「木木」兩字來自姓氏「林」——兩棵木，是根，也是初心。</p>
-      <p>花，是心意的形狀——看得見、摸得到的那份誠心。<br>願，是你想說的話——對神明、對離開的人、對自己。</p>
-      <p>木木花願，就是用花，把你的心願帶過去。</p>
-      <p>我相信獻花不只是儀式，是一種對話——<br>和逝去的人，和心中的神明，和那些還沒說出口的話。</p>
-    </div>
-  </div>
-  <div class="about-values">
-    <div class="val-item">
-      <p class="vi-label">材料</p>
-      <h3>金紙與經文紙</h3>
-      <p>選用適合敬獻場合的紙材，同時兼顧質感與文化意涵</p>
-    </div>
-    <div class="val-item">
-      <p class="vi-label">工序</p>
-      <h3>全程手工製作</h3>
-      <p>從裁紙到成形，每個步驟都親手完成，不走捷徑</p>
-    </div>
-    <div class="val-item">
-      <p class="vi-label">場合</p>
-      <h3>祭祀・節日・感謝</h3>
-      <p>神明誕辰、還願、清明祭祖——有心意的場合都適合</p>
-    </div>
-    <div class="val-item">
-      <p class="vi-label">品牌</p>
-      <h3>木木創藝手作</h3>
-      <p>同品牌也提供手作課程，歡迎進入花藝及香草植物的香氛療癒世界</p>
-    </div>
-  </div>
+<div class="about-hero">
+<div>
+<h2 style="font-family:'LXGW WenKai TC','Noto Serif TC',serif;font-size:clamp(28px,4vw,48px);color:var(--moss);line-height:1.6;font-weight:400">關於<br>木木花願</h2>
+</div>
+<div class="about-text">
+<p>「木木」兩字來自姓氏「林」——兩棵木，是根，也是初心。</p>
+<p>花，是心意的形狀——看得見、摸得到的那份誠心。<br>願，是你想說的話——對神明、對離開的人、對自己。</p>
+<p>木木花願，就是用花，把你的心願帶過去。</p>
+<p>我相信獻花不只是儀式，是一種對話——<br>和逝去的人，和心中的神明，和那些還沒說出口的話。</p>
+</div>
+</div>
+<div class="about-values">
+<div class="val-item">
+<p class="vi-label">材料</p>
+<h3>金紙與經文紙</h3>
+<p>選用適合敬獻場合的紙材，同時兼顧質感與文化意涵</p>
+</div>
+<div class="val-item">
+<p class="vi-label">工序</p>
+<h3>全程手工製作</h3>
+<p>從裁紙到成形，每個步驟都親手完成，不走捷徑</p>
+</div>
+<div class="val-item">
+<p class="vi-label">場合</p>
+<h3>祭祀・節日・感謝</h3>
+<p>神明誕辰、還願、清明祭祖——有心意的場合都適合</p>
+</div>
+<div class="val-item">
+<p class="vi-label">品牌</p>
+<h3>木木創藝手作</h3>
+<p>同品牌也提供手作課程，歡迎進入花藝及香草植物的香氛療癒世界</p>
+</div>
+</div>
 </div>
 
 <!-- SHOP -->
 <div class="page" id="page-shop">
-  <div class="shop-header">
-    <div>
-      <p class="section-label" style="margin-bottom:4px">商品展示</p>
-      <h2 style="font-size:28px">精緻祈福花束</h2>
-    </div>
-    <div style="display:flex;flex-direction:column;gap:6px">
-      <p style="font-size:12px;color:var(--muted);line-height:1.8"><span style="color:var(--rose);font-weight:500">貼心提醒：</span>金紙種類因地區、廟宇及信仰習俗而異，建議依實際祭祀需求選購。</p>
-      <p style="font-size:12px;color:var(--muted);line-height:1.8"><span style="color:var(--moss);font-weight:500">🎨 客製化：</span>使用經文紙製作的花束均可客製化顏色，歡迎<a href="https://line.me/ti/p/@996ndkte" target="_blank" style="color:var(--moss);text-decoration:underline">加入LINE好友</a>聊聊！</p>
-    </div>
-
-  </div>
-  <div class="product-grid" id="productGrid"></div>
+<div class="shop-header">
+<div>
+<p class="section-label" style="margin-bottom:4px">商品展示</p>
+<h2 style="font-size:28px">精緻祈福花束</h2>
+</div>
+<div style="display:flex;flex-direction:column;gap:6px">
+<p style="font-size:12px;color:var(--muted);line-height:1.8"><span style="color:var(--rose);font-weight:500">貼心提醒：</span>金紙種類因地區、廟宇及信仰習俗而異，建議依實際祭祀需求選購。</p>
+<p style="font-size:12px;color:var(--muted);line-height:1.8"><span style="color:var(--moss);font-weight:500">🎨 客製化：</span>使用經文紙製作的花束均可客製化顏色，歡迎<a href="https://line.me/ti/p/@996ndkte" target="_blank" style="color:var(--moss);text-decoration:underline">加入LINE好友</a>聊聊！</p>
+</div>
+</div>
+<div class="product-grid" id="productGrid"></div>
 </div>
 
 <!-- CART -->
 <div class="page" id="page-cart">
-  <div class="cart-wrap">
-    <h2>購物車</h2>
-    <div id="cartContent"></div>
-  </div>
+<div class="cart-wrap">
+<h2>購物車</h2>
+<div id="cartContent"></div>
+</div>
 </div>
 
 <footer>
-  <span class="f-brand">木木花願 MuMu Wishing Flower</span>
-  <p class="f-copy">© 2026 木木花願版權所有　網站內容、圖片與文案未經授權請勿轉載及使用</p>
+<span class="f-brand">木木花願 MuMu Wishing Flower</span>
+<p class="f-copy">© 2026 木木花願版權所有 網站內容、圖片與文案未經授權請勿轉載及使用</p>
 </footer>
 
 <div class="toast" id="toast"></div>
 <button class="scroll-top" id="scrollTop" onclick="window.scrollTo({top:0,behavior:'smooth'})" aria-label="回到頂部">
-  <i class="ti ti-arrow-up"></i>
+<i class="ti ti-arrow-up"></i>
 </button>
 
 <script>
 const products = [
-  {id:1,name:'迎福花束',tag:'',desc:'使用福金製作<br>用途：據說是土地公行事用的紙錢，因此祭拜土地公必定要燒福金，又稱土地公金<br>可以祭祀神明之外，也能作為神明部屬、神兵、神將的盤纏<br>常見於：初二十六拜土地公、開工拜拜、求財',price:399,icon:'bouquet',cat:'花束'},
-  {id:2,name:'吉祥花束',tag:'',desc:'使用壽金製作<br>用途：拜拜時最常見的金紙<br>紙面會印有福祿壽（財子壽）三仙圖樣，幾乎所有神明皆可使用<br>常見於：初一十五拜拜、廟宇參拜、各種節慶',price:780,icon:'basket',cat:'花束'},
-  {id:3,name:'慈佑花束',tag:'',desc:'使用大悲咒經文紙製作<br>以菩薩大悲心加持，能清淨業障，轉危為安，庇佑平安健康，助亡靈超拔往生<br>用途：觀音信仰、超渡法會、消災解厄<br>常見於：佛前供奉、祖先祭祀、普渡法會',price:1280,icon:'cake',cat:'經文紙花束'},
-  {id:4,name:'彩願花束',tag:'',desc:'使用壽生經經文紙製作<br>依《壽生經》法意，具延壽補運之能<br>用途：延年益壽、還壽生債<br>常見於：祝壽、祈福、還願還庫',price:1280,icon:'rainbow',cat:'經文紙花束'},
-
-
-  ,{id:5,name:'追思小花束',tag:'',desc:'使用小銀製作<br>用途：清明祭祖、中元普渡、重陽節、忌日、百日、對年、做七、法會祭拜祖先<br>「小銀」面額比大銀小，多用來祭拜亡魂或普渡時祭拜先祖和陰間鬼差<br>（去世未滿三年僅能用大銀、小銀等銀紙）',price:399,icon:'memorial',cat:'祭祀花束'}
+{id:1,name:'迎福花束',tag:'',desc:'使用福金製作<br>用途：據說是土地公行事用的紙錢，因此祭拜土地公必定要燒福金，又稱土地公金<br>可以祭祀神明之外，也能作為神明部屬、神兵、神將的盤纏<br>常見於：初二十六拜土地公、開工拜拜、求財',price:399,icon:'bouquet',cat:'花束'},
+{id:2,name:'吉祥花束',tag:'',desc:'使用壽金製作<br>用途：拜拜時最常見的金紙<br>紙面會印有福祿壽（財子壽）三仙圖樣，幾乎所有神明皆可使用<br>常見於：初一十五拜拜、廟宇參拜、各種節慶',price:780,icon:'basket',cat:'花束'},
+{id:3,name:'慈佑花束',tag:'',desc:'使用大悲咒經文紙製作<br>以菩薩大悲心加持，能清淨業障，轉危為安，庇佑平安健康，助亡靈超拔往生<br>用途：觀音信仰、超渡法會、消災解厄<br>常見於：佛前供奉、祖先祭祀、普渡法會',price:1280,icon:'cake',cat:'經文紙花束'},
+{id:4,name:'彩願花束',tag:'',desc:'使用壽生經經文紙製作<br>依《壽生經》法意，具延壽補運之能<br>用途：延年益壽、還壽生債<br>常見於：祝壽、祈福、還願還庫',price:1280,icon:'rainbow',cat:'經文紙花束'},
+{id:5,name:'追思小花束',tag:'',desc:'使用小銀製作<br>用途：清明祭祖、中元普渡、重陽節、忌日、百日、對年、做七、法會祭拜祖先<br>「小銀」面額比大銀小，多用來祭拜亡魂或普渡時祭拜先祖和陰間鬼差<br>（去世未滿三年僅能用大銀、小銀等銀紙）',price:399,icon:'memorial',cat:'祭祀花束'},
+{id:6,name:'花籃（小型款）',tag:'',desc:'手工紙藝花籃，小巧精緻，適合日常供桌或小型敬獻場合<br>歡迎透過LINE詢問款式與細節',icon:'basket_s',cat:'花籃'},
+{id:7,name:'花籃（中型款）',tag:'',desc:'手工紙藝花籃，份量適中，適合廟宇敬獻或較正式的祭祀場合<br>歡迎透過LINE詢問款式與細節',icon:'basket_m',cat:'花籃'}
 ];
-
 const cart = {};
-
 function productIcon(t) {
-  if(t==='bouquet') return `<div class="slider-wrap">
-    <div class="slider-track" id="slider-1">
-      <img src="images/LINE_ALBUM_2026626_260626_33.jpg" alt="金紙花束1">
-      <img src="images/LINE_ALBUM_2026626_260626_32.jpg" alt="金紙花束2">
-      <img src="images/LINE_ALBUM_2026626_260626_29.jpg" alt="金紙花束3">
-    </div>
-    <button class="slider-btn prev" onclick="slideImg(event,'slider-1',-1)">&#8249;</button>
-    <button class="slider-btn next" onclick="slideImg(event,'slider-1',1)">&#8250;</button>
-    <div class="slider-dots">
-      <button class="slider-dot active" onclick="slideTo(event,'slider-1',0)"></button>
-      <button class="slider-dot" onclick="slideTo(event,'slider-1',1)"></button>
-      <button class="slider-dot" onclick="slideTo(event,'slider-1',2)"></button>
-    </div>
-  </div>`;
-  if(t==='mini') return '<svg viewBox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg" style="width:52px;height:52px"><ellipse cx="28" cy="22" rx="7" ry="11" fill="none" stroke="#9AAE8A" stroke-width="1.2" transform="rotate(-18 28 22)"/><ellipse cx="28" cy="22" rx="7" ry="11" fill="none" stroke="#C4968A" stroke-width="1.2" transform="rotate(18 28 22)"/><ellipse cx="28" cy="22" rx="7" ry="11" fill="none" stroke="#6B7F5E" stroke-width="1.2" transform="rotate(55 28 22)"/><circle cx="28" cy="22" r="2.5" fill="#C4968A"/><line x1="28" y1="33" x2="28" y2="50" stroke="#9AAE8A" stroke-width="1.5"/></svg>';
-  if(t==='basket') return `<div class="slider-wrap">
-    <div class="slider-track" id="slider-2">
-      <img src="images/LINE_ALBUM_2026626_260626_23.jpg" alt="中型金紙花束1">
-      <img src="images/LINE_ALBUM_2026626_260626_25.jpg" alt="中型金紙花束2">
-      <img src="images/LINE_ALBUM_2026626_260626_26.jpg" alt="中型金紙花束3">
-    </div>
-    <button class="slider-btn prev" onclick="slideImg(event,'slider-2',-1)">&#8249;</button>
-    <button class="slider-btn next" onclick="slideImg(event,'slider-2',1)">&#8250;</button>
-    <div class="slider-dots">
-      <button class="slider-dot active" onclick="slideTo(event,'slider-2',0)"></button>
-      <button class="slider-dot" onclick="slideTo(event,'slider-2',1)"></button>
-      <button class="slider-dot" onclick="slideTo(event,'slider-2',2)"></button>
-    </div>
-  </div>`;
-  if(t==='cake') return `<div class="slider-wrap">
-    <div class="slider-track" id="slider-3">
-      <img src="images/LINE_ALBUM_2026626_260626_18.jpg" alt="大悲神咒1">
-      <img src="images/LINE_ALBUM_2026626_260626_14.jpg" alt="大悲神咒2">
-      <img src="images/LINE_ALBUM_2026626_260626_27.jpg" alt="大悲神咒3">
-    </div>
-    <button class="slider-btn prev" onclick="slideImg(event,'slider-3',-1)">&#8249;</button>
-    <button class="slider-btn next" onclick="slideImg(event,'slider-3',1)">&#8250;</button>
-    <div class="slider-dots">
-      <button class="slider-dot active" onclick="slideTo(event,'slider-3',0)"></button>
-      <button class="slider-dot" onclick="slideTo(event,'slider-3',1)"></button>
-      <button class="slider-dot" onclick="slideTo(event,'slider-3',2)"></button>
-    </div>
-  </div>`;
-  if(t==='basket_s') return `<div class="slider-wrap"><div class="slider-track" id="slider-6"><img src="images/LINE_ALBUM_2026626_260629_3.jpg" alt="花籃小型款"></div></div>`;
-  if(t==='basket_m') return `<div class="slider-wrap"><div class="slider-track" id="slider-7"><img src="images/LINE_ALBUM_2026626_260702_4.jpg" alt="花籃中型款"></div></div>`;
-  if(t==='memorial') return `<div class="slider-wrap">
-    <div class="slider-track" id="slider-5">
-      <img src="images/LINE_ALBUM_2026626_260626_19.jpg" alt="追思小花束1">
-      <img src="images/LINE_ALBUM_2026626_260626_20.jpg" alt="追思小花束2">
-      <img src="images/LINE_ALBUM_2026626_260626_22.jpg" alt="追思小花束3">
-    </div>
-    <button class="slider-btn prev" onclick="slideImg(event,'slider-5',-1)">&#8249;</button>
-    <button class="slider-btn next" onclick="slideImg(event,'slider-5',1)">&#8250;</button>
-    <div class="slider-dots">
-      <button class="slider-dot active" onclick="slideTo(event,'slider-5',0)"></button>
-      <button class="slider-dot" onclick="slideTo(event,'slider-5',1)"></button>
-      <button class="slider-dot" onclick="slideTo(event,'slider-5',2)"></button>
-    </div>
-  </div>`;
-  if(t==='rainbow') return `<div class="slider-wrap">
-    <div class="slider-track" id="slider-4">
-      <img src="images/LINE_ALBUM_2026626_260626_17.jpg" alt="彩虹花束1">
-      <img src="images/LINE_ALBUM_2026626_260626_16.jpg" alt="彩虹花束2">
-      <img src="images/LINE_ALBUM_2026626_260626_28.jpg" alt="彩虹花束3">
-    </div>
-    <button class="slider-btn prev" onclick="slideImg(event,'slider-4',-1)">&#8249;</button>
-    <button class="slider-btn next" onclick="slideImg(event,'slider-4',1)">&#8250;</button>
-    <div class="slider-dots">
-      <button class="slider-dot active" onclick="slideTo(event,'slider-4',0)"></button>
-      <button class="slider-dot" onclick="slideTo(event,'slider-4',1)"></button>
-      <button class="slider-dot" onclick="slideTo(event,'slider-4',2)"></button>
-    </div>
-  </div>`;
-  return '<svg viewBox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg" style="width:52px;height:52px"><path d="M28 8 L31 18 L42 18 L33 25 L36 36 L28 29 L20 36 L23 25 L14 18 L25 18 Z" fill="none" stroke="#C4968A" stroke-width="1.2"/></svg>';
+if(t==='bouquet') return `<div class="slider-wrap">
+<div class="slider-track" id="slider-1">
+<img src="images/LINE_ALBUM_2026626_260626_33.jpg" alt="金紙花束1">
+<img src="images/LINE_ALBUM_2026626_260626_32.jpg" alt="金紙花束2">
+<img src="images/LINE_ALBUM_2026626_260626_29.jpg" alt="金紙花束3">
+</div>
+<button class="slider-btn prev" onclick="slideImg(event,'slider-1',-1)">&#8249;</button>
+<button class="slider-btn next" onclick="slideImg(event,'slider-1',1)">&#8250;</button>
+<div class="slider-dots">
+<button class="slider-dot active" onclick="slideTo(event,'slider-1',0)"></button>
+<button class="slider-dot" onclick="slideTo(event,'slider-1',1)"></button>
+<button class="slider-dot" onclick="slideTo(event,'slider-1',2)"></button>
+</div>
+</div>`;
+if(t==='mini') return '<svg viewBox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg" style="width:52px;height:52px"><ellipse cx="28" cy="22" rx="7" ry="11" fill="none" stroke="#9AAE8A" stroke-width="1.2" transform="rotate(-18 28 22)"/><ellipse cx="28" cy="22" rx="7" ry="11" fill="none" stroke="#C4968A" stroke-width="1.2" transform="rotate(18 28 22)"/><ellipse cx="28" cy="22" rx="7" ry="11" fill="none" stroke="#6B7F5E" stroke-width="1.2" transform="rotate(55 28 22)"/><circle cx="28" cy="22" r="2.5" fill="#C4968A"/><line x1="28" y1="33" x2="28" y2="50" stroke="#9AAE8A" stroke-width="1.5"/></svg>';
+if(t==='basket') return `<div class="slider-wrap">
+<div class="slider-track" id="slider-2">
+<img src="images/LINE_ALBUM_2026626_260626_23.jpg" alt="中型金紙花束1">
+<img src="images/LINE_ALBUM_2026626_260626_25.jpg" alt="中型金紙花束2">
+<img src="images/LINE_ALBUM_2026626_260626_26.jpg" alt="中型金紙花束3">
+</div>
+<button class="slider-btn prev" onclick="slideImg(event,'slider-2',-1)">&#8249;</button>
+<button class="slider-btn next" onclick="slideImg(event,'slider-2',1)">&#8250;</button>
+<div class="slider-dots">
+<button class="slider-dot active" onclick="slideTo(event,'slider-2',0)"></button>
+<button class="slider-dot" onclick="slideTo(event,'slider-2',1)"></button>
+<button class="slider-dot" onclick="slideTo(event,'slider-2',2)"></button>
+</div>
+</div>`;
+if(t==='cake') return `<div class="slider-wrap">
+<div class="slider-track" id="slider-3">
+<img src="images/LINE_ALBUM_2026626_260626_18.jpg" alt="大悲神咒1">
+<img src="images/LINE_ALBUM_2026626_260626_14.jpg" alt="大悲神咒2">
+<img src="images/LINE_ALBUM_2026626_260626_27.jpg" alt="大悲神咒3">
+</div>
+<button class="slider-btn prev" onclick="slideImg(event,'slider-3',-1)">&#8249;</button>
+<button class="slider-btn next" onclick="slideImg(event,'slider-3',1)">&#8250;</button>
+<div class="slider-dots">
+<button class="slider-dot active" onclick="slideTo(event,'slider-3',0)"></button>
+<button class="slider-dot" onclick="slideTo(event,'slider-3',1)"></button>
+<button class="slider-dot" onclick="slideTo(event,'slider-3',2)"></button>
+</div>
+</div>`;
+if(t==='basket_s') return `<div class="slider-wrap"><div class="slider-track" id="slider-6"><img src="images/LINE_ALBUM_2026626_260629_3.jpg" alt="花籃小型款"></div></div>`;
+if(t==='basket_m') return `<div class="slider-wrap"><div class="slider-track" id="slider-7"><img src="images/LINE_ALBUM_2026626_260702_4.jpg" alt="花籃中型款"></div></div>`;
+if(t==='memorial') return `<div class="slider-wrap">
+<div class="slider-track" id="slider-5">
+<img src="images/LINE_ALBUM_2026626_260626_19.jpg" alt="追思小花束1">
+<img src="images/LINE_ALBUM_2026626_260626_20.jpg" alt="追思小花束2">
+<img src="images/LINE_ALBUM_2026626_260626_22.jpg" alt="追思小花束3">
+</div>
+<button class="slider-btn prev" onclick="slideImg(event,'slider-5',-1)">&#8249;</button>
+<button class="slider-btn next" onclick="slideImg(event,'slider-5',1)">&#8250;</button>
+<div class="slider-dots">
+<button class="slider-dot active" onclick="slideTo(event,'slider-5',0)"></button>
+<button class="slider-dot" onclick="slideTo(event,'slider-5',1)"></button>
+<button class="slider-dot" onclick="slideTo(event,'slider-5',2)"></button>
+</div>
+</div>`;
+if(t==='rainbow') return `<div class="slider-wrap">
+<div class="slider-track" id="slider-4">
+<img src="images/LINE_ALBUM_2026626_260626_17.jpg" alt="彩虹花束1">
+<img src="images/LINE_ALBUM_2026626_260626_16.jpg" alt="彩虹花束2">
+<img src="images/LINE_ALBUM_2026626_260626_28.jpg" alt="彩虹花束3">
+</div>
+<button class="slider-btn prev" onclick="slideImg(event,'slider-4',-1)">&#8249;</button>
+<button class="slider-btn next" onclick="slideImg(event,'slider-4',1)">&#8250;</button>
+<div class="slider-dots">
+<button class="slider-dot active" onclick="slideTo(event,'slider-4',0)"></button>
+<button class="slider-dot" onclick="slideTo(event,'slider-4',1)"></button>
+<button class="slider-dot" onclick="slideTo(event,'slider-4',2)"></button>
+</div>
+</div>`;
+return '<svg viewBox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg" style="width:52px;height:52px"><path d="M28 8 L31 18 L42 18 L33 25 L36 36 L28 29 L20 36 L23 25 L14 18 L25 18 Z" fill="none" stroke="#C4968A" stroke-width="1.2"/></svg>';
 }
-
 function renderShop(filter) {
-
-  const list = filter ? products.filter(p => p.cat === filter) : products;
-  const bouquets = list.filter(p => p.cat !== '花籃');
-  const baskets = list.filter(p => p.cat === '花籃');
-  
-  const bouquetHTML = bouquets.length ? `
-    <div style="grid-column:1/-1;padding:24px 16px 8px;background:var(--cream);border-bottom:1px solid var(--border)">
-      <p style="font-size:11px;letter-spacing:.28em;color:var(--rose);margin-bottom:4px">精緻祈福花束</p>
-    </div>` : '';
-  
-  const basketHTML = baskets.length ? `
-    <div style="grid-column:1/-1;padding:24px 16px 8px;background:var(--cream);border-bottom:1px solid var(--border)">
-      <p style="font-size:11px;letter-spacing:.28em;color:var(--rose);margin-bottom:4px">精緻祈福花籃</p>
-    </div>` : '';
-
-  document.getElementById('productGrid').innerHTML = bouquetHTML + bouquets.map(p => `
-    <div class="prod-card">
-      <div class="prod-img">${productIcon(p.icon)}</div>
-      <div class="prod-body">
-        ${p.tag ? `<p class="prod-tag">${p.tag}</p>` : ''}
-        <p class="prod-name">${p.name}</p>
-        <p class="prod-desc" style="white-space:normal">${p.desc}</p>
-        <div class="prod-footer">
-          <span class="prod-price">NT$ ${p.price}</span>
-        </div>
-        <div style="display:flex;gap:6px;margin-top:10px;flex-wrap:wrap">
-          <a href="https://myship.7-11.com.tw/general/detail/GM2605179486685" target="_blank" class="buy-btn">賣貨便下單</a>
-          <a href="https://line.me/ti/p/@996ndkte" target="_blank" class="buy-btn-line">LINE詢問</a>
-        </div>
-      </div>
-    </div>`).join('') + basketHTML + baskets.map(p => `
-    <div class="prod-card">
-      <div class="prod-img">${productIcon(p.icon)}</div>
-      <div class="prod-body">
-        <p class="prod-name">${p.name}</p>
-        <p class="prod-desc" style="white-space:normal">${p.desc}</p>
-        <div style="display:flex;gap:6px;margin-top:10px;flex-wrap:wrap">
-          <a href="https://line.me/ti/p/@996ndkte" target="_blank" class="buy-btn-line">LINE詢問</a>
-        </div>
-      </div>
-    </div>`).join('');
+const list = filter ? products.filter(p => p.cat === filter) : products;
+const bouquets = list.filter(p => p.cat !== '花籃');
+const baskets = list.filter(p => p.cat === '花籃');
+const bouquetHTML = bouquets.length ? `
+<div style="grid-column:1/-1;padding:24px 16px 8px;background:var(--cream);border-bottom:1px solid var(--border)">
+<p style="font-size:11px;letter-spacing:.28em;color:var(--rose);margin-bottom:4px">精緻祈福花束</p>
+</div>` : '';
+const basketHTML = baskets.length ? `
+<div style="grid-column:1/-1;padding:24px 16px 8px;background:var(--cream);border-bottom:1px solid var(--border)">
+<p style="font-size:11px;letter-spacing:.28em;color:var(--rose);margin-bottom:4px">精緻祈福花籃</p>
+</div>` : '';
+document.getElementById('productGrid').innerHTML = bouquetHTML + bouquets.map(p => `
+<div class="prod-card">
+<div class="prod-img">${productIcon(p.icon)}</div>
+<div class="prod-body">
+${p.tag ? `<p class="prod-tag">${p.tag}</p>` : ''}
+<p class="prod-name">${p.name}</p>
+<p class="prod-desc" style="white-space:normal">${p.desc}</p>
+<div class="prod-footer">
+<span class="prod-price">NT$ ${p.price}</span>
+</div>
+<div style="display:flex;gap:6px;margin-top:10px;flex-wrap:wrap">
+<a href="https://myship.7-11.com.tw/general/detail/GM2605179486685" target="_blank" class="buy-btn">賣貨便下單</a>
+<a href="https://line.me/ti/p/@996ndkte" target="_blank" class="buy-btn-line">LINE詢問</a>
+</div>
+</div>
+</div>`).join('') + basketHTML + baskets.map(p => `
+<div class="prod-card">
+<div class="prod-img">${productIcon(p.icon)}</div>
+<div class="prod-body">
+<p class="prod-name">${p.name}</p>
+<p class="prod-desc" style="white-space:normal">${p.desc}</p>
+<div style="display:flex;gap:6px;margin-top:10px;flex-wrap:wrap">
+<a href="https://line.me/ti/p/@996ndkte" target="_blank" class="buy-btn-line">LINE詢問</a>
+</div>
+</div>
+</div>`).join('');
 }
-
 const cart_map = {};
 function addCart(id) {
-  cart_map[id] = (cart_map[id]||0)+1;
-  updateBadge();
-  showToast('已加入：' + products.find(x=>x.id===id).name);
+cart_map[id] = (cart_map[id]||0)+1;
+updateBadge();
+showToast('已加入：' + products.find(x=>x.id===id).name);
 }
 function updateBadge() {
-  const n = Object.values(cart_map).reduce((a,b)=>a+b,0);
-  const b = document.getElementById('cartBadge');
-  b.textContent = n;
-  b.style.display = n>0?'flex':'none';
+const n = Object.values(cart_map).reduce((a,b)=>a+b,0);
+const b = document.getElementById('cartBadge');
+b.textContent = n;
+b.style.display = n>0?'flex':'none';
 }
 function renderCart() {
-  const keys = Object.keys(cart_map).filter(k=>cart_map[k]>0);
-  const el = document.getElementById('cartContent');
-  if(!keys.length){
-    el.innerHTML=`<div class="empty-cart"><i class="ti ti-shopping-bag"></i><p>購物車是空的<br>去看看喜歡的作品吧</p></div>
-    <div style="text-align:center;margin-top:20px"><button class="btn-outline" onclick="goPage('shop')">前往商品展示</button></div>`;
-    return;
-  }
-  const subtotal = keys.reduce((s,k)=>{const p=products.find(x=>x.id==k);return s+p.price*cart_map[k];},0);
-  const ship = subtotal>=800?0:80;
-  el.innerHTML = keys.map(k=>{
-    const p=products.find(x=>x.id==k);
-    return `<div class="cart-item">
-      <div class="ci-icon"><i class="ti ti-shopping-bag"></i></div>
-      <div class="ci-info"><p class="ci-name">${p.name}</p><p class="ci-tag">NT$ ${p.price}</p></div>
-      <div class="ci-controls">
-        <button class="qty-btn" onclick="changeQty(${k},-1)">−</button>
-        <span class="qty-num">${cart_map[k]}</span>
-        <button class="qty-btn" onclick="changeQty(${k},1)">+</button>
-      </div>
-      <span class="ci-price">NT$ ${p.price*cart_map[k]}</span>
-      <button class="ci-del" onclick="removeItem(${k})"><i class="ti ti-trash"></i></button>
-    </div>`;
-  }).join('') + `
-    <div class="cart-summary">
-      <div class="summary-row"><span>商品小計</span><span>NT$ ${subtotal}</span></div>
-      <div class="summary-row"><span>運費${subtotal>=800?'（滿800免運）':''}</span><span>${ship===0?'免運':'NT$ '+ship}</span></div>
-      <div class="summary-total"><span>合計</span><span>NT$ ${subtotal+ship}</span></div>
-    </div>
-    <button class="cart-cta" onclick="checkout()">前往結帳 →</button>
-    <p style="text-align:center;font-size:11px;color:var(--hint);margin-top:12px">結帳後薏仁會透過你的聯絡方式確認訂單</p>`;
+const keys = Object.keys(cart_map).filter(k=>cart_map[k]>0);
+const el = document.getElementById('cartContent');
+if(!keys.length){
+el.innerHTML=`<div class="empty-cart"><i class="ti ti-shopping-bag"></i><p>購物車是空的<br>去看看喜歡的作品吧</p></div>
+<div style="text-align:center;margin-top:20px"><button class="btn-outline" onclick="goPage('shop')">前往商品展示</button></div>`;
+return;
+}
+const subtotal = keys.reduce((s,k)=>{const p=products.find(x=>x.id==k);return s+p.price*cart_map[k];},0);
+const ship = subtotal>=800?0:80;
+el.innerHTML = keys.map(k=>{
+const p=products.find(x=>x.id==k);
+return `<div class="cart-item">
+<div class="ci-icon"><i class="ti ti-shopping-bag"></i></div>
+<div class="ci-info"><p class="ci-name">${p.name}</p><p class="ci-tag">NT$ ${p.price}</p></div>
+<div class="ci-controls">
+<button class="qty-btn" onclick="changeQty(${k},-1)">−</button>
+<span class="qty-num">${cart_map[k]}</span>
+<button class="qty-btn" onclick="changeQty(${k},1)">+</button>
+</div>
+<span class="ci-price">NT$ ${p.price*cart_map[k]}</span>
+<button class="ci-del" onclick="removeItem(${k})"><i class="ti ti-trash"></i></button>
+</div>`;
+}).join('') + `
+<div class="cart-summary">
+<div class="summary-row"><span>商品小計</span><span>NT$ ${subtotal}</span></div>
+<div class="summary-row"><span>運費${subtotal>=800?'（滿800免運）':''}</span><span>${ship===0?'免運':'NT$ '+ship}</span></div>
+<div class="summary-total"><span>合計</span><span>NT$ ${subtotal+ship}</span></div>
+</div>
+<button class="cart-cta" onclick="checkout()">前往結帳 →</button>
+<p style="text-align:center;font-size:11px;color:var(--hint);margin-top:12px">結帳後薏仁會透過你的聯絡方式確認訂單</p>`;
 }
 function changeQty(id,d){cart_map[id]=Math.max(0,(cart_map[id]||0)+d);if(cart_map[id]===0)delete cart_map[id];updateBadge();renderCart();}
 function removeItem(id){delete cart_map[id];updateBadge();renderCart();}
 function checkout(){showToast('感謝你的訂單！薏仁會盡快聯絡你');Object.keys(cart_map).forEach(k=>delete cart_map[k]);updateBadge();setTimeout(()=>renderCart(),300);}
-
 function goPage(name) {
-  document.querySelectorAll('.page').forEach(p=>p.classList.remove('active'));
-  document.getElementById('page-'+name).classList.add('active');
-  document.querySelectorAll('.nav-links a').forEach(a=>a.classList.toggle('active',a.dataset.page===name));
-  if(name==='shop') renderShop('');
-  if(name==='cart') renderCart();
-  window.scrollTo(0,0);
+document.querySelectorAll('.page').forEach(p=>p.classList.remove('active'));
+document.getElementById('page-'+name).classList.add('active');
+document.querySelectorAll('.nav-links a').forEach(a=>a.classList.toggle('active',a.dataset.page===name));
+if(name==='shop') renderShop('');
+if(name==='cart') renderCart();
+window.scrollTo(0,0);
 }
-
 function showToast(msg){
-  const t=document.getElementById('toast');
-  t.textContent=msg;t.classList.add('show');
-  setTimeout(()=>t.classList.remove('show'),2200);
+const t=document.getElementById('toast');
+t.textContent=msg;t.classList.add('show');
+setTimeout(()=>t.classList.remove('show'),2200);
 }
-
 function slideImg(e,id,dir){
-  e.stopPropagation();
-  const track=document.getElementById(id);
-  if(!track)return;
-  let cur=Math.round(track.scrollLeft/track.offsetWidth);
-  const total=track.querySelectorAll('img').length;
-  cur=Math.min(Math.max(cur+dir,0),total-1);
-  track.scrollTo({left:cur*track.offsetWidth,behavior:'smooth'});
-  updateDots(id,cur);
+e.stopPropagation();
+const track=document.getElementById(id);
+if(!track)return;
+let cur=Math.round(track.scrollLeft/track.offsetWidth);
+const total=track.querySelectorAll('img').length;
+cur=Math.min(Math.max(cur+dir,0),total-1);
+track.scrollTo({left:cur*track.offsetWidth,behavior:'smooth'});
+updateDots(id,cur);
 }
 function slideTo(e,id,idx){
-  e.stopPropagation();
-  const track=document.getElementById(id);
-  if(!track)return;
-  track.scrollTo({left:idx*track.offsetWidth,behavior:'smooth'});
-  updateDots(id,idx);
+e.stopPropagation();
+const track=document.getElementById(id);
+if(!track)return;
+track.scrollTo({left:idx*track.offsetWidth,behavior:'smooth'});
+updateDots(id,idx);
 }
 function updateDots(id,idx){
-  const wrap=document.getElementById(id).closest('.slider-wrap');
-  if(!wrap)return;
-  wrap.querySelectorAll('.slider-dot').forEach((d,i)=>d.classList.toggle('active',i===idx));
+const wrap=document.getElementById(id).closest('.slider-wrap');
+if(!wrap)return;
+wrap.querySelectorAll('.slider-dot').forEach((d,i)=>d.classList.toggle('active',i===idx));
 }
-
 window.addEventListener('scroll',function(){
-  const b=document.getElementById('scrollTop');
-  if(b){b.classList.toggle('show',window.scrollY>200);}
+const b=document.getElementById('scrollTop');
+if(b){b.classList.toggle('show',window.scrollY>200);}
 });
 </script>
 </body>
