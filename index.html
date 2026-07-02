@@ -237,8 +237,7 @@ footer .f-copy{font-size:11px;color:rgba(255,255,255,.85);letter-spacing:.04em;w
 <div class="page" id="page-shop">
 <div class="shop-header">
 <div>
-<p class="section-label" style="margin-bottom:4px">商品展示</p>
-<h2 style="font-size:28px">精緻祈福花束</h2>
+<p class="section-label" style="margin-bottom:4px;font-size:22px;letter-spacing:.15em;color:var(--moss)">商品展示</p>
 </div>
 <div style="display:flex;flex-direction:column;gap:6px">
 <p style="font-size:12px;color:var(--muted);line-height:1.8"><span style="color:var(--rose);font-weight:500">貼心提醒：</span>金紙種類因地區、廟宇及信仰習俗而異，建議依實際祭祀需求選購。</p>
@@ -359,11 +358,11 @@ const bouquets = list.filter(p => p.cat !== '花籃');
 const baskets = list.filter(p => p.cat === '花籃');
 const bouquetHTML = bouquets.length ? `
 <div style="grid-column:1/-1;padding:24px 16px 8px;background:var(--cream);border-bottom:1px solid var(--border)">
-<p style="font-size:11px;letter-spacing:.28em;color:var(--rose);margin-bottom:4px">精緻祈福花束</p>
+<p style="font-size:18px;letter-spacing:.15em;color:var(--rose);margin-bottom:4px">精緻祈福花束</p>
 </div>` : '';
 const basketHTML = baskets.length ? `
 <div style="grid-column:1/-1;padding:24px 16px 8px;background:var(--cream);border-bottom:1px solid var(--border)">
-<p style="font-size:11px;letter-spacing:.28em;color:var(--rose);margin-bottom:4px">精緻祈福花籃</p>
+<p style="font-size:18px;letter-spacing:.15em;color:var(--rose);margin-bottom:4px">精緻祈福花籃</p>
 </div>` : '';
 document.getElementById('productGrid').innerHTML = bouquetHTML + bouquets.map(p => `
 <div class="prod-card">
